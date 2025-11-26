@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="cse213.cement_factory.Maliha_2420913.salesExecutivedashboardController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.salesExecutivedashboardController">
+   <children>
+      <Button layoutX="53.0" layoutY="106.0" mnemonicParsing="false" text="View all confirmed orders" />
+      <Button layoutX="364.0" layoutY="260.0" mnemonicParsing="false" text="View total revenue generated" />
+      <Button layoutX="362.0" layoutY="213.0" mnemonicParsing="false" text="Record new dealer details" />
+      <Button layoutX="364.0" layoutY="155.0" mnemonicParsing="false" text="Send order confirmation to dealer" />
+      <Button layoutX="362.0" layoutY="106.0" mnemonicParsing="false" text="Generates invoice for cement sales" />
+      <Button layoutX="53.0" layoutY="210.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="132.0" text="Search orders by date" />
+      <Button layoutX="53.0" layoutY="155.0" mnemonicParsing="false" text="View Sales Report" />
+      <Button layoutX="53.0" layoutY="260.0" mnemonicParsing="false" text="View and manage confirmed orders" />
+      <Label layoutX="184.0" layoutY="30.0" prefHeight="42.0" prefWidth="230.0" text="Sales Executive Dashboard">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
