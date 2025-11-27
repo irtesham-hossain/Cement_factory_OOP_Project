@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="428.0" prefWidth="654.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.productAvailibilityController">
+   <children>
+      <Label fx:id="outputLabel" layoutX="69.0" layoutY="96.0" prefHeight="26.0" prefWidth="78.0" text="output" textFill="#ccc5c5" />
+      <Label layoutX="232.0" layoutY="29.0" prefHeight="38.0" prefWidth="189.0" text="Product Availibility" textFill="#d11154">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="528.0" layoutY="373.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="26.0" prefWidth="70.0" text="Back" />
+      <TableView fx:id="tableView" layoutX="97.0" layoutY="154.0" prefHeight="200.0" prefWidth="450.0">
+        <columns>
+          <TableColumn fx:id="productNameTV" prefWidth="107.20001220703125" text="Product Name" />
+          <TableColumn fx:id="productTypeTV" prefWidth="106.40003967285156" text="Product Type" />
+            <TableColumn fx:id="availableQuantityTV" prefWidth="118.39996337890625" text="Available Quantity" />
+            <TableColumn fx:id="unitPriceTV" prefWidth="109.5999755859375" text="Unit Price" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

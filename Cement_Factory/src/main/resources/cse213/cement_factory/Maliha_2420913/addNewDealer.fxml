@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.addNewDealerController">
+   <children>
+      <Label layoutX="57.0" layoutY="119.0" prefHeight="18.0" prefWidth="42.0" text="Name:" />
+      <Label layoutX="57.0" layoutY="164.0" prefHeight="18.0" prefWidth="49.0" text="Contact:" />
+      <Label layoutX="57.0" layoutY="213.0" text="Address: " />
+      <TextField fx:id="nameTF" layoutX="122.0" layoutY="115.0" />
+      <TextField fx:id="addressTF" layoutX="122.0" layoutY="209.0" />
+      <TextField fx:id="contactTF" layoutX="122.0" layoutY="160.0" />
+      <Label layoutX="227.0" layoutY="30.0" prefHeight="31.0" prefWidth="170.0" text="Add New Dealer" textFill="#df126b">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Button layoutX="152.0" layoutY="260.0" mnemonicParsing="false" onAction="#saveInfoButtonOnAction" prefHeight="26.0" prefWidth="120.0" text="Save Information" />
+      <Label fx:id="outputLabel" layoutX="312.0" layoutY="260.0" prefHeight="26.0" prefWidth="120.0" text="Output" textFill="#bfbbbb" />
+      <Button layoutX="490.0" layoutY="340.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="26.0" prefWidth="63.0" text="Back" />
+   </children>
+</AnchorPane>

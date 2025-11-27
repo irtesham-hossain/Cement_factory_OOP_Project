@@ -28,4 +28,8 @@ public class confirmedOrdersController
     @Deprecated
     public void viewConfirmedOrdersOnActionButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+    }
 }

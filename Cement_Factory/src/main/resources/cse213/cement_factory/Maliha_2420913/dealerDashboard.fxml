@@ -9,9 +9,9 @@
     <children>
         <Button layoutX="53.0" layoutY="103.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" text="Place new order" />
         <Button layoutX="387.0" layoutY="258.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="172.0" text="View total revenue generated" />
-        <Button layoutX="385.0" layoutY="211.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="172.0" text="Search past orders by date" />
-        <Button layoutX="387.0" layoutY="153.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="169.0" text="Update personal information" />
-        <Button layoutX="385.0" layoutY="98.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="159.0" text=" View past payment history" />
+        <Button layoutX="385.0" layoutY="211.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="172.0" text="Search Past Orders" />
+        <Button layoutX="387.0" layoutY="153.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="169.0" text="Update Personal Information" />
+        <Button layoutX="385.0" layoutY="98.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="159.0" text="View Payment History" />
         <Button layoutX="57.0" layoutY="211.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="178.0" text=" Check available stock" />
         <Button layoutX="53.0" layoutY="258.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="246.0" text="Track delivery progress of confirmed orders" />
         <Button layoutX="57.0" layoutY="153.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="170.0" text="Make payments for an order " />

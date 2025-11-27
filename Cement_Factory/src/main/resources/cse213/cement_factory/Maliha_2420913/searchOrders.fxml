@@ -29,5 +29,7 @@
         <Button layoutX="616.0" layoutY="434.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="26.0" prefWidth="62.0" text="Back" />
       <Label layoutX="60.0" layoutY="88.0" prefHeight="26.0" prefWidth="90.0" text="Enter Order ID: " />
       <TextField layoutX="150.0" layoutY="94.0" />
+      <Label fx:id="outputLabel" layoutX="431.0" layoutY="93.0" prefHeight="26.0" prefWidth="119.0" text="output" textFill="#c7c6c6" />
+      <Button layoutX="315.0" layoutY="93.0" mnemonicParsing="false" onAction="#enterOrderIDButtonOnAction" text="Enter" />
     </children>
 </AnchorPane>

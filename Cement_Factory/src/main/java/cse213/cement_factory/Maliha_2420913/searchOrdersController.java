@@ -18,6 +18,8 @@ public class searchOrdersController
     private TableColumn orderDateTVColumn;
     @javafx.fxml.FXML
     private TableColumn deliveryStatusTVColumn;
+    @javafx.fxml.FXML
+    private Label outputLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -25,5 +27,9 @@ public class searchOrdersController
 
     @javafx.fxml.FXML
     public void backButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void enterOrderIDButtonOnAction(ActionEvent actionEvent) {
     }
 }

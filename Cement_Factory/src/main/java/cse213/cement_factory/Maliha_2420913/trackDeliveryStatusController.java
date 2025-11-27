@@ -1,6 +1,6 @@
 package cse213.cement_factory.Maliha_2420913;
 
-public class viewDeliveryStatusController
+public class trackDeliveryStatusController
 {
     @javafx.fxml.FXML
     private TableColumn productTypeTVColumn;
@@ -8,8 +8,6 @@ public class viewDeliveryStatusController
     private TableColumn orderIDTVColumn;
     @javafx.fxml.FXML
     private Label outputLabel;
-    @javafx.fxml.FXML
-    private TableColumn dealerNameTVColumn;
     @javafx.fxml.FXML
     private TableColumn quantityTVColumn;
     @javafx.fxml.FXML
