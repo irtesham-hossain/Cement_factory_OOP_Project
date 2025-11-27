@@ -5,21 +5,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.salesExecutivedashboardController">
+<AnchorPane prefHeight="418.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.salesExecutivedashboardController">
    <children>
       <Button layoutX="53.0" layoutY="106.0" mnemonicParsing="false" text="View all confirmed orders" />
-      <Button layoutX="364.0" layoutY="260.0" mnemonicParsing="false" text="View total revenue generated" />
-      <Button layoutX="362.0" layoutY="213.0" mnemonicParsing="false" text="Record new dealer details" />
-      <Button layoutX="364.0" layoutY="155.0" mnemonicParsing="false" text="Send order confirmation to dealer" />
-      <Button layoutX="362.0" layoutY="106.0" mnemonicParsing="false" text="Generates invoice for cement sales" />
-      <Button layoutX="53.0" layoutY="210.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="132.0" text="Search orders by date" />
-      <Button layoutX="53.0" layoutY="155.0" mnemonicParsing="false" text="View Sales Report" />
-      <Button layoutX="53.0" layoutY="260.0" mnemonicParsing="false" text="View and manage confirmed orders" />
-      <Label layoutX="184.0" layoutY="30.0" prefHeight="42.0" prefWidth="230.0" text="Sales Executive Dashboard">
+      <Button layoutX="378.0" layoutY="260.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="151.0" text="View Revenue Report" />
+      <Button layoutX="376.0" layoutY="161.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="151.0" text="Add new Dealer" />
+      <Button layoutX="378.0" layoutY="213.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="151.0" text="Send order confirmation" />
+      <Button layoutX="376.0" layoutY="106.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="151.0" text="Generate Invoice " />
+      <Button layoutX="53.0" layoutY="256.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="151.0" text="Search orders " />
+      <Button layoutX="53.0" layoutY="200.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="151.0" text="View Sales Report" />
+      <Button layoutX="53.0" layoutY="148.0" mnemonicParsing="false" text="View Delivery Status" />
+      <Label layoutX="184.0" layoutY="30.0" prefHeight="42.0" prefWidth="250.0" text="Sales Executive Dashboard">
          <font>
-            <Font size="19.0" />
+            <Font size="21.0" />
          </font>
       </Label>
+      <Button layoutX="504.0" layoutY="348.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="63.0" text="Back" />
    </children>
 </AnchorPane>

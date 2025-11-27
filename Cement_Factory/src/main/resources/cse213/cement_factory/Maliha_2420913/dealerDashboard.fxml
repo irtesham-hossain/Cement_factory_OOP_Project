@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="421.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.salesExecutivedashboardController">
+<AnchorPane prefHeight="421.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.dealerDashboardController">
     <children>
         <Button layoutX="53.0" layoutY="103.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" text="Place new order" />
         <Button layoutX="387.0" layoutY="258.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="172.0" text="View total revenue generated" />
@@ -20,5 +20,6 @@
                 <Font size="20.0" />
             </font>
         </Label>
+      <Button layoutX="552.0" layoutY="366.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="59.0" text="Back" />
     </children>
 </AnchorPane>

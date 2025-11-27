@@ -1,6 +1,6 @@
 package cse213.cement_factory.Maliha_2420913;
 
-public class viewAndManageDeliveryStatusController
+public class viewDeliveryStatusController
 {
     @javafx.fxml.FXML
     private TableColumn productTypeTVColumn;
@@ -23,9 +23,4 @@ public class viewAndManageDeliveryStatusController
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
-
-    @javafx.fxml.FXML
-    public void viewDeliveryStatusOptionOnActionButton(ActionEvent actionEvent) {
-    }
-}
+    }}

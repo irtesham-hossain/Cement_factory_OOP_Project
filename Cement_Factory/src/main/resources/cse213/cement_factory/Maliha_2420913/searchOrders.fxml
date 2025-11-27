@@ -4,12 +4,13 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="484.0" prefWidth="716.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.confirmedOrdersController">
+<AnchorPane prefHeight="484.0" prefWidth="716.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.searchOrdersController">
     <children>
-        <Label layoutX="204.0" layoutY="38.0" prefHeight="34.0" prefWidth="308.0" text="All Confirmed Customer Orders" textFill="#ef1b65">
+        <Label layoutX="285.0" layoutY="33.0" prefHeight="34.0" prefWidth="146.0" text="Search Orders" textFill="#ef1b65">
             <font>
                 <Font size="21.0" />
             </font>
@@ -25,7 +26,8 @@
                 <TableColumn fx:id="deliveryStatusTVColumn" minWidth="0.0" prefWidth="101.60002441406255" text="Delivery Status" />
             </columns>
         </TableView>
-        <Label fx:id="outputLabel" layoutX="54.0" layoutY="98.0" prefHeight="34.0" prefWidth="197.0" text="Output Message" textFill="#b6bfbd" />
-      <Button layoutX="616.0" layoutY="434.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="62.0" text="Back" />
+        <Button layoutX="616.0" layoutY="434.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="26.0" prefWidth="62.0" text="Back" />
+      <Label layoutX="60.0" layoutY="88.0" prefHeight="26.0" prefWidth="90.0" text="Enter Order ID: " />
+      <TextField layoutX="150.0" layoutY="94.0" />
     </children>
 </AnchorPane>

@@ -1,6 +1,6 @@
 package cse213.cement_factory.Maliha_2420913;
 
-public class confirmedOrdersController
+public class searchOrdersController
 {
     @javafx.fxml.FXML
     private TableColumn productTypeTVColumn;
@@ -8,8 +8,6 @@ public class confirmedOrdersController
     private TableColumn orderIDTVColumn;
     @javafx.fxml.FXML
     private TableColumn totalPriceTVColumn;
-    @javafx.fxml.FXML
-    private Label outputLabel;
     @javafx.fxml.FXML
     private TableColumn customerNameTVColumn;
     @javafx.fxml.FXML
@@ -25,7 +23,7 @@ public class confirmedOrdersController
     public void initialize() {
     }
 
-    @Deprecated
-    public void viewConfirmedOrdersOnActionButton(ActionEvent actionEvent) {
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
     }
 }
