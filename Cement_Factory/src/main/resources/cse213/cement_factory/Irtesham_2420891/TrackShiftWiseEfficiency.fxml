@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+    <children>
+        <DatePicker layoutX="121.0" layoutY="159.0" />
+        <Button layoutX="342.0" layoutY="159.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" text="Check Efficiency" />
+        <Text layoutX="183.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Track Shift Wise Efficiency" textAlignment="CENTER" wrappingWidth="276.408203125">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Button layoutX="414.0" layoutY="216.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" text="Clear " />
+        <Button layoutX="14.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Back" />
+        <ComboBox layoutX="146.0" layoutY="203.0" prefHeight="25.0" prefWidth="91.0" />
+        <Label layoutX="68.0" layoutY="208.0" text="Shift Number" />
+      <Label layoutX="119.0" layoutY="308.0" prefHeight="65.0" prefWidth="354.0" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="163.0" text="Date" />
+    </children>
+</AnchorPane>
