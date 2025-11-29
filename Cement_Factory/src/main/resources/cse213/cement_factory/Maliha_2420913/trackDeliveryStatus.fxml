@@ -15,14 +15,12 @@
             </font>
         </Label>
         <Label fx:id="outputLabel" layoutX="63.0" layoutY="101.0" prefHeight="31.0" prefWidth="150.0" text="Output Message" textFill="#a9a1a1" />
-        <TableView fx:id="tableView" layoutX="93.0" layoutY="167.0" prefHeight="200.0" prefWidth="611.0">
+        <TableView fx:id="tableView" layoutX="166.0" layoutY="164.0" prefHeight="200.0" prefWidth="497.0">
             <columns>
-                <TableColumn fx:id="orderIDTVColumn" prefWidth="65.59997177124023" text="Order ID" />
-                <TableColumn fx:id="orderDateTVColumn" prefWidth="82.39996337890625" text="Order Date" />
-                <TableColumn fx:id="productTypeTVColumn" prefWidth="113.59991455078125" text="Product Type" />
-                <TableColumn fx:id="quantityTVColumn" prefWidth="86.40008544921875" text="Quantity" />
-                <TableColumn fx:id="deliveryStatusTVColumn" prefWidth="107.199951171875" text="Delivery Status" />
-                <TableColumn fx:id="expectedDeliveryDateTVColumn" prefWidth="144.7999267578125" text="Expected Delivery Date" />
+                <TableColumn fx:id="orderIDTVColumn" prefWidth="106.39994812011719" text="Order ID" />
+                <TableColumn fx:id="orderDateTVColumn" prefWidth="108.800048828125" text="Order Date" />
+                <TableColumn fx:id="deliveryStatusTVColumn" prefWidth="115.2000732421875" text="Delivery Status" />
+                <TableColumn fx:id="expectedDeliveryDateTVColumn" prefWidth="167.199951171875" text="Expected Delivery Date" />
             </columns>
         </TableView>
         <Button layoutX="698.0" layoutY="397.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="26.0" prefWidth="66.0" text="Back" />
