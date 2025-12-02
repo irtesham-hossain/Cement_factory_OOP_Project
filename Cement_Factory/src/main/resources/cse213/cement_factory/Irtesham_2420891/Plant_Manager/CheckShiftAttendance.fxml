@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Irtesham_2420891.Plant_Manager.CheckShiftAttendance_Controller">
     <children>
-        <TableView layoutX="58.0" layoutY="170.0" prefHeight="200.0" prefWidth="483.0">
+        <TableView fx:id="attendanceTV" layoutX="58.0" layoutY="170.0" prefHeight="200.0" prefWidth="483.0">
             <columns>
                 <TableColumn fx:id="dateCol" prefWidth="75.0" text="Date" />
                 <TableColumn fx:id="ShiftNumberCol" prefWidth="132.00003051757812" text="Shift Number" />
@@ -21,14 +21,14 @@
             </columns>
         </TableView>
         <DatePicker fx:id="attendance_date" layoutX="110.0" layoutY="76.0" />
-        <Button fx:id="addTableButton" layoutX="331.0" layoutY="76.0" mnemonicParsing="false" onAction="#addToTableONF" prefHeight="25.0" prefWidth="160.0" text="Add To Table" />
+        <Button fx:id="addTableButton" layoutX="331.0" layoutY="76.0" mnemonicParsing="false" onAction="#addToTableONA" prefHeight="25.0" prefWidth="160.0" text="Add To Table" />
         <Text layoutX="183.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Check shift Attendance of Workers" wrappingWidth="276.408203125">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Button fx:id="claerButton" layoutX="403.0" layoutY="133.0" mnemonicParsing="false" onAction="#clearONF" prefHeight="25.0" prefWidth="160.0" text="Clear Table" />
-        <Button fx:id="backButton" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#BackONF" prefHeight="25.0" prefWidth="57.0" text="Back" />
+        <Button fx:id="claerButton" layoutX="403.0" layoutY="133.0" mnemonicParsing="false" onAction="#clearONA" prefHeight="25.0" prefWidth="160.0" text="Clear Table" />
+        <Button fx:id="backButton" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#BackONA" prefHeight="25.0" prefWidth="57.0" text="Back" />
       <ComboBox fx:id="shiftNumberCombo" layoutX="135.0" layoutY="120.0" prefWidth="150.0" />
       <Label layoutX="57.0" layoutY="125.0" text="Shift Number" />
     </children>

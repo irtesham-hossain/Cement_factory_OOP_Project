@@ -1,4 +1,4 @@
-package cse213.cement_factory;
+package cse213.cement_factory.main;
 
 import javafx.application.Application;
 
