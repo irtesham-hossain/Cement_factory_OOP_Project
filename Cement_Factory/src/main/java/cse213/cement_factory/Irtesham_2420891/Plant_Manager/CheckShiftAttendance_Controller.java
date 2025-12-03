@@ -101,6 +101,8 @@ public class CheckShiftAttendance_Controller
 
     @javafx.fxml.FXML
     public void clearONA(ActionEvent actionEvent) {
+        attendanceTV.getItems().clear();
+
     }
     public void error(String s){
         Alert alert=new Alert(Alert.AlertType.ERROR);

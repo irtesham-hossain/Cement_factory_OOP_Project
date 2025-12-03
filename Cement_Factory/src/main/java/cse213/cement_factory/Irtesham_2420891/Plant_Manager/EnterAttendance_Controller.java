@@ -2,8 +2,7 @@ package cse213.cement_factory.Irtesham_2420891.Plant_Manager;
 
 import cse213.cement_factory.main.AppendableObjectOutputStream;
 import cse213.cement_factory.main.HelloApplication;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
