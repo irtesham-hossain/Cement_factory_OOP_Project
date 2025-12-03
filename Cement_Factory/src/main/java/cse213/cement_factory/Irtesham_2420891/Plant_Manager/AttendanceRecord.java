@@ -1,8 +1,9 @@
 package cse213.cement_factory.Irtesham_2420891.Plant_Manager;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class AttendanceRecord {
+public class AttendanceRecord implements Serializable {
     private LocalDate attendance_date;
     private int shift_number;
     private int total_worker,present_worker;

@@ -11,8 +11,8 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Irtesham_2420891.Plant_Manager.EnterAttendance_Controller">
     <children>
-        <DatePicker layoutX="93.0" layoutY="145.0" />
-        <Button layoutX="242.0" layoutY="242.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" text="Submit Attendance" />
+        <DatePicker fx:id="attendance_date" layoutX="93.0" layoutY="145.0" />
+        <Button fx:id="submitButton" layoutX="242.0" layoutY="242.0" mnemonicParsing="false" onAction="#submitONA" prefHeight="25.0" prefWidth="160.0" text="Submit Attendance" />
         <Text layoutX="152.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Enter Attendance of workers Shiftwise" wrappingWidth="339.74151611328125">
             <font>
                 <Font size="18.0" />
@@ -20,11 +20,11 @@
         </Text>
         <Button layoutX="14.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Back" />
         <Label layoutX="57.0" layoutY="125.0" prefHeight="17.0" prefWidth="91.0" text="Date " />
-        <TextField layoutX="119.0" layoutY="200.0" />
+        <TextField fx:id="worker_total_tf" layoutX="119.0" layoutY="200.0" />
         <Label layoutX="57.0" layoutY="182.0" prefHeight="17.0" prefWidth="149.0" text="Total Worker of the Shift:" />
-      <TextField layoutX="384.0" layoutY="154.0" />
+      <TextField fx:id="worker_present_tf" layoutX="384.0" layoutY="154.0" />
       <Label layoutX="322.0" layoutY="136.0" prefHeight="17.0" prefWidth="175.0" text="Total Worker Present in the shift" />
-      <ComboBox layoutX="384.0" layoutY="200.0" prefWidth="150.0" />
+      <ComboBox fx:id="shift_number_combo" layoutX="384.0" layoutY="200.0" prefWidth="150.0" />
       <Label layoutX="368.0" layoutY="182.0" prefHeight="17.0" prefWidth="103.0" text="Shift Number:" />
     </children>
 </AnchorPane>
