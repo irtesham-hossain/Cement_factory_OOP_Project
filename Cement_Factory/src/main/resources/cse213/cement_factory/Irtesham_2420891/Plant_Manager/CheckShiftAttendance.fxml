@@ -10,14 +10,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Irtesham_2420891.Plant_Manager.CheckShiftAttendance_Controller">
+<AnchorPane fx:id="checkAttendanceAnchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Irtesham_2420891.Plant_Manager.CheckShiftAttendance_Controller">
     <children>
         <TableView fx:id="attendanceTV" layoutX="58.0" layoutY="170.0" prefHeight="200.0" prefWidth="483.0">
             <columns>
                 <TableColumn fx:id="dateCol" prefWidth="75.0" text="Date" />
                 <TableColumn fx:id="ShiftNumberCol" prefWidth="132.00003051757812" text="Shift Number" />
                 <TableColumn fx:id="WorkerPresentCol" prefWidth="138.666748046875" text="Worker Present" />
-                <TableColumn fx:id="WorkerAbsentCol" prefWidth="138.666748046875" text="Worker Absent" />
+                <TableColumn fx:id="TotalWorkerCol" prefWidth="138.666748046875" text="Total Worker " />
             </columns>
         </TableView>
         <DatePicker fx:id="attendance_date" layoutX="110.0" layoutY="76.0" />
