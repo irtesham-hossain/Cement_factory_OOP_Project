@@ -1,9 +1,12 @@
 package cse213.cement_factory.Irtesham_2420891.Plant_Manager;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import cse213.cement_factory.Irtesham_2420891.Plant_Manager.AttendanceRecord;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -30,6 +33,7 @@ public class EnterAttendance_Controller
 
     @javafx.fxml.FXML
     public void submitONA(ActionEvent actionEvent) throws IOException {
+        
         AttendanceRecord A =new AttendanceRecord(attendance_date.getValue(),shift_number_combo.getValue(),Integer.parseInt(worker_total_tf.getText()),Integer.parseInt(worker_present_tf.getText()));
 
         FileOutputStream fos= new FileOutputStream("Attendance.bin");
