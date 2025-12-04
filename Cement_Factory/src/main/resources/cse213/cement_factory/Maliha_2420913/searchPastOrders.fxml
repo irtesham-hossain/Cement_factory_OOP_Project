@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="433.0" prefWidth="659.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.searchPastOrders">
+<AnchorPane fx:id="pastOrdersAnchor" prefHeight="433.0" prefWidth="659.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.searchPastOrders">
    <children>
       <Label layoutX="210.0" layoutY="31.0" prefHeight="38.0" prefWidth="182.0" text="Search Past Orders" textFill="#d40c70">
          <font>
@@ -17,16 +16,15 @@
          </font>
       </Label>
       <Label layoutX="48.0" layoutY="95.0" prefHeight="18.0" prefWidth="70.0" text="Enter Date:" />
-      <DatePicker layoutX="141.0" layoutY="91.0" />
-      <TableView layoutX="76.0" layoutY="158.0" prefHeight="170.0" prefWidth="486.0">
+      <DatePicker fx:id="enterDateDP" layoutX="141.0" layoutY="91.0" />
+      <TableView fx:id="TableView" layoutX="76.0" layoutY="158.0" prefHeight="170.0" prefWidth="486.0">
         <columns>
-          <TableColumn prefWidth="113.60004425048828" text="Order ID" />
-          <TableColumn prefWidth="135.99993896484375" text="Product Type" />
-            <TableColumn prefWidth="99.2000732421875" text="Quantity" />
-            <TableColumn prefWidth="136.79995727539062" text="Total Amount" />
+          <TableColumn fx:id="orderIdTVColumn" prefWidth="113.60004425048828" text="Order ID" />
+          <TableColumn fx:id="productTypeTVColumn" prefWidth="135.99993896484375" text="Product Type" />
+            <TableColumn fx:id="quantityTVColumn" prefWidth="99.2000732421875" text="Quantity" />
+            <TableColumn fx:id="totalAmountTVColumn" prefWidth="136.79995727539062" text="Total Amount" />
         </columns>
       </TableView>
-      <Label layoutX="364.0" layoutY="96.0" prefHeight="26.0" prefWidth="144.0" text="output" textFill="#d9d2d2" />
-      <Button layoutX="550.0" layoutY="373.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Back" />
+      <Button layoutX="550.0" layoutY="373.0" mnemonicParsing="false" onAction="#backButton" prefHeight="26.0" prefWidth="70.0" text="Back" />
    </children>
 </AnchorPane>

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="484.0" prefWidth="716.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.searchOrdersController">
+<AnchorPane fx:id="searchOrderAnchor" prefHeight="484.0" prefWidth="716.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.searchOrdersController">
     <children>
         <Label layoutX="285.0" layoutY="33.0" prefHeight="34.0" prefWidth="146.0" text="Search Orders" textFill="#ef1b65">
             <font>
@@ -19,7 +19,7 @@
             <columns>
                 <TableColumn fx:id="orderIDTVColumn" prefWidth="73.60003662109375" text="Order ID" />
                 <TableColumn fx:id="orderDateTVColumn" prefWidth="83.19995880126953" text="Order Date" />
-                <TableColumn fx:id="customerNameTVColumn" prefWidth="103.2000732421875" text="Customer Name" />
+                <TableColumn fx:id="customerNameTVColumn" prefWidth="103.2000732421875" text="Dealer Name" />
                 <TableColumn fx:id="productTypeTVColumn" prefWidth="97.60003662109375" text="Product Type" />
                 <TableColumn fx:id="quantityTVColumn" prefWidth="64.0" text="Quantity" />
                 <TableColumn fx:id="totalPriceTVColumn" prefWidth="80.79995727539062" text="Total Price" />
@@ -29,7 +29,6 @@
         <Button layoutX="616.0" layoutY="434.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="26.0" prefWidth="62.0" text="Back" />
       <Label layoutX="60.0" layoutY="88.0" prefHeight="26.0" prefWidth="90.0" text="Enter Order ID: " />
       <TextField layoutX="150.0" layoutY="94.0" />
-      <Label fx:id="outputLabel" layoutX="431.0" layoutY="93.0" prefHeight="26.0" prefWidth="119.0" text="output" textFill="#c7c6c6" />
       <Button layoutX="315.0" layoutY="93.0" mnemonicParsing="false" onAction="#enterOrderIDButtonOnAction" text="Enter" />
     </children>
 </AnchorPane>

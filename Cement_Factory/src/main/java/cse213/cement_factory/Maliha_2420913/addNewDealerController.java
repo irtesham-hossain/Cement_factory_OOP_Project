@@ -36,9 +36,8 @@ public class addNewDealerController
     @javafx.fxml.FXML
     public void backButtonOnAction(ActionEvent actionEvent) throws IOException {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/cse213/cement_factory/Maliha_2420913/salesExecutivedashboard.fxml")
-        );
-
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource
+                ("/cse213/cement_factory/Maliha_2420913/salesExecutivedashboard.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
         Stage stage = (Stage) addDealerAnchor.getScene().getWindow();
@@ -53,25 +52,26 @@ public class addNewDealerController
         String name = nameTF.getText();
         String address = addressTF.getText();
         String contact = contactTF.getText();
+
         File file = new File("AddNewDealer.bin");
+        FileOutputStream fos = null;
+        ObjectOutputStream oos = null;
+
 
         if(file.exists()){
-            FileOutputStream fos = new FileOutputStream(file, true);
-            ObjectOutputStream obs =new AppendableObjectOutputStream(fos);
-            obs.writeObject(new newDealer(name,contact,address));
-            Info("Added");
-            obs.close();
-
-
+            fos = new FileOutputStream(file, true);
+            oos =new AppendableObjectOutputStream(fos);
+           // oos.writeObject(new newDealer(name,contact,address));
         }
         else{
-            FileOutputStream fos = new FileOutputStream("AddNewDealer.bin");
-            ObjectOutputStream obs = new ObjectOutputStream(fos);
-            obs.writeObject(new newDealer(name,contact,address));
-            Info("Added");
-            obs.close();
+            fos = new FileOutputStream("AddNewDealer.bin");
+            oos = new ObjectOutputStream(fos);
+
 
         }
+        oos.writeObject(new newDealer(name,contact,address));
+        Info("Added");
+        oos.close();
 
 
 

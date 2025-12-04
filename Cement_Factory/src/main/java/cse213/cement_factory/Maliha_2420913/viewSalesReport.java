@@ -1,7 +1,75 @@
 package cse213.cement_factory.Maliha_2420913;
 
+import cse213.cement_factory.main.HelloApplication;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
 public class viewSalesReport
 {
     @javafx.fxml.FXML
+    private Label totalSalesOutputL;
+    @javafx.fxml.FXML
+    private TableColumn totalPriceTVColumn;
+    @javafx.fxml.FXML
+    private TableColumn paymentStatusTVColumn;
+    @javafx.fxml.FXML
+    private TableColumn dealerNameTVColumn;
+    @javafx.fxml.FXML
+    private TableColumn quantityTVColumn;
+    @javafx.fxml.FXML
+    private TableView tableView;
+    @javafx.fxml.FXML
+    private TableColumn productIdTVColumn;
+    @javafx.fxml.FXML
+    private AnchorPane viewSalesReportAnchor;
+    @javafx.fxml.FXML
+    private TableColumn orderIdTVColumn;
+
+    @javafx.fxml.FXML
     public void initialize() {
-    }}
+    }
+
+    @javafx.fxml.FXML
+    public void endDateDP(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void selectMonthCB(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void selectDateDP(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource
+                ("/cse213/cement_factory/Maliha_2420913/salesExecutivedashboard.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = (Stage) viewSalesReportAnchor.getScene().getWindow();
+        stage.setTitle("Add New Dealer");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @javafx.fxml.FXML
+    public void generateReportButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void reportTypeCB(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void startDateDP(ActionEvent actionEvent) {
+    }
+}

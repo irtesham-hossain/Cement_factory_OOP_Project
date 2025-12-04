@@ -7,7 +7,6 @@ module cse213.cement_factory {
     requires java.desktop;
 
 
-
 //    opens cse213.cement_factory to javafx.fxml;
 //    exports cse213.cement_factory;
     exports cse213.cement_factory.main;

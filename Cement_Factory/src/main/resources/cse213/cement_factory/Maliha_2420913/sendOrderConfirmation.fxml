@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.sendOrderConfirmationController">
+<AnchorPane fx:id="sendOrderConfirmationAnchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.sendOrderConfirmationController">
    <children>
       <Label layoutX="194.0" layoutY="24.0" prefHeight="38.0" prefWidth="250.0" text="Send Order Confirmation" textFill="#e41579">
          <font>
@@ -15,9 +14,8 @@
          </font>
       </Label>
       <Label layoutX="84.0" layoutY="129.0" text="Enter Order ID:" />
-      <TextField layoutX="175.0" layoutY="125.0" />
-      <Button layoutX="353.0" layoutY="125.0" mnemonicParsing="false" text="Send Confirmation" />
-      <Button layoutX="495.0" layoutY="336.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="52.0" text="Back" />
-      <Label layoutX="84.0" layoutY="181.0" prefHeight="18.0" prefWidth="150.0" text="output" textFill="#cccccc" />
+      <TextField fx:id="enterOrderIdTF" layoutX="175.0" layoutY="125.0" />
+      <Button layoutX="353.0" layoutY="125.0" mnemonicParsing="false" onAction="#sendConfirmationButtonOnAction" text="Send Confirmation" />
+      <Button layoutX="495.0" layoutY="336.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="26.0" prefWidth="52.0" text="Back" />
    </children>
 </AnchorPane>

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.provideFeedbackController">
+<AnchorPane fx:id="feedbackAnchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.provideFeedbackController">
    <children>
       <Label layoutX="195.0" layoutY="28.0" text="Provide Feedback" textFill="#e712a3">
          <font>
@@ -15,11 +15,10 @@
          </font>
       </Label>
       <Label layoutX="60.0" layoutY="91.0" text="Completed Orders:" />
-      <ComboBox layoutX="168.0" layoutY="87.0" prefWidth="150.0" />
-      <TextArea layoutX="60.0" layoutY="166.0" prefHeight="129.0" prefWidth="324.0" />
-      <Button layoutX="399.0" layoutY="270.0" mnemonicParsing="false" text="Submit Feedback" />
+      <ComboBox fx:id="completeOrderCB" layoutX="168.0" layoutY="87.0" prefWidth="150.0" />
+      <TextArea fx:id="yourFeedbackTA" layoutX="60.0" layoutY="166.0" prefHeight="129.0" prefWidth="324.0" />
+      <Button layoutX="399.0" layoutY="270.0" mnemonicParsing="false" onAction="#submitFeedbackButton" text="Submit Feedback" />
       <Label layoutX="60.0" layoutY="132.0" text="Your Feedback:" />
-      <Button layoutX="507.0" layoutY="346.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="53.0" text="Back" />
-      <Label layoutX="59.0" layoutY="315.0" prefHeight="26.0" prefWidth="140.0" text="output" textFill="#c1bbbb" />
+      <Button layoutX="507.0" layoutY="346.0" mnemonicParsing="false" onAction="#backButton" prefHeight="26.0" prefWidth="53.0" text="Back" />
    </children>
 </AnchorPane>

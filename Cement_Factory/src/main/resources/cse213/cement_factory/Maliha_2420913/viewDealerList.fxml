@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="viewDealerListAnchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.viewDealerListController">
+   <children>
+      <Label layoutX="202.0" layoutY="31.0" prefHeight="34.0" prefWidth="150.0" text="View Dealer List" textFill="#d41899">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableView" layoutX="102.0" layoutY="111.0" prefHeight="200.0" prefWidth="438.0">
+        <columns>
+          <TableColumn fx:id="dealerIdTVColumn" prefWidth="105.5999755859375" text="Dealer Id" />
+          <TableColumn fx:id="dealerNameTVColumn" prefWidth="109.60003662109375" text="Dealer Name" />
+            <TableColumn fx:id="phoneTVColumn" prefWidth="106.39990234375" text="Phone" />
+            <TableColumn fx:id="addressTVColumn" prefWidth="115.19998779296873" text="Address" />
+        </columns>
+      </TableView>
+      <Button layoutX="496.0" layoutY="352.0" mnemonicParsing="false" onAction="#backButton" prefHeight="26.0" prefWidth="58.0" text="Back" />
+   </children>
+</AnchorPane>

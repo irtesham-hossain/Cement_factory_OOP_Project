@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.generateInvoiceController">
+<AnchorPane fx:id="generatInvoiceAnchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.generateInvoiceController">
    <children>
       <Label layoutX="204.0" layoutY="34.0" prefHeight="38.0" prefWidth="174.0" text="Generate Invoice" textFill="#e41579">
          <font>
@@ -15,9 +14,8 @@
          </font>
       </Label>
       <Label layoutX="94.0" layoutY="139.0" text="Enter Order ID:" />
-      <TextField layoutX="185.0" layoutY="135.0" />
-      <Button layoutX="363.0" layoutY="135.0" mnemonicParsing="false" text="Generate Invoice " />
-      <Button layoutX="505.0" layoutY="346.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="52.0" text="Back" />
-      <Label layoutX="94.0" layoutY="191.0" prefHeight="18.0" prefWidth="150.0" text="output" textFill="#cccccc" />
+      <TextField fx:id="orderIDTF" layoutX="185.0" layoutY="135.0" />
+      <Button layoutX="363.0" layoutY="135.0" mnemonicParsing="false" onAction="#generateInvoiveButtonOnAction" text="Generate Invoice " />
+      <Button layoutX="505.0" layoutY="346.0" mnemonicParsing="false" onAction="#backButton" prefHeight="26.0" prefWidth="52.0" text="Back" />
    </children>
 </AnchorPane>

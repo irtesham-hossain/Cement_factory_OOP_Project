@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.placeNewOrderController">
+<AnchorPane fx:id="placeOrderAnchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.placeNewOrderController">
    <children>
       <Label layoutX="175.0" layoutY="35.0" prefHeight="30.0" prefWidth="250.0" text="Place a new Cement Order" textFill="#ec15a4">
          <font>
@@ -18,11 +17,10 @@
       <Label layoutX="60.0" layoutY="130.0" text="Product Type:" />
       <Label layoutX="60.0" layoutY="183.0" text="Quantity:" />
       <Label layoutX="60.0" layoutY="244.0" text="Location:" />
-      <TextField layoutX="150.0" layoutY="179.0" />
-      <TextField layoutX="150.0" layoutY="240.0" />
-      <Label layoutX="150.0" layoutY="296.0" prefHeight="46.0" prefWidth="150.0" text="output" textFill="#c4c1c1" />
-      <Button layoutX="329.0" layoutY="231.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="73.0" text="Enter" />
-      <Button layoutX="480.0" layoutY="342.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="58.0" text="Back" />
-      <ComboBox layoutX="150.0" layoutY="126.0" prefWidth="150.0" />
+      <TextField fx:id="quantityTF" layoutX="150.0" layoutY="179.0" />
+      <TextField fx:id="locationTF" layoutX="150.0" layoutY="240.0" />
+      <Button layoutX="329.0" layoutY="231.0" mnemonicParsing="false" onAction="#enterbutton" prefHeight="26.0" prefWidth="73.0" text="Enter" />
+      <Button layoutX="480.0" layoutY="342.0" mnemonicParsing="false" onAction="#backButton" prefHeight="26.0" prefWidth="58.0" text="Back" />
+      <ComboBox fx:id="productTypeCB" layoutX="150.0" layoutY="126.0" prefWidth="150.0" />
    </children>
 </AnchorPane>

@@ -7,23 +7,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="418.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.viewPaymentHistoryController">
+<AnchorPane fx:id="viewPaymentAnchor" prefHeight="418.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.viewPaymentHistoryController">
    <children>
       <Label layoutX="236.0" layoutY="29.0" prefHeight="42.0" prefWidth="220.0" text="View Payment History" textFill="#d1285d">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="62.0" layoutY="94.0" prefHeight="25.0" prefWidth="103.0" text="output" textFill="#b7b3b3" />
-      <TableView layoutX="87.0" layoutY="147.0" prefHeight="200.0" prefWidth="518.0">
+      <TableView fx:id="tableView" layoutX="87.0" layoutY="147.0" prefHeight="200.0" prefWidth="518.0">
         <columns>
-          <TableColumn prefWidth="114.40003204345703" text="Order ID" />
-          <TableColumn prefWidth="118.39996337890625" text="Date" />
-            <TableColumn prefWidth="124.0" text="Total Amount" />
-            <TableColumn prefWidth="163.19998168945312" text="Payment Method" />
+          <TableColumn fx:id="orderIdTVColumn" prefWidth="114.40003204345703" text="Order ID" />
+          <TableColumn fx:id="DateTVColumn" prefWidth="118.39996337890625" text="Date" />
+            <TableColumn fx:id="totalAmountTVColumn" prefWidth="124.0" text="Total Amount" />
+            <TableColumn fx:id="paymentMethodTVColumn" prefWidth="163.19998168945312" text="Payment Method" />
         </columns>
       </TableView>
-      <Button layoutX="586.0" layoutY="372.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="586.0" layoutY="372.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>

@@ -4,21 +4,27 @@ import cse213.cement_factory.main.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class provideFeedbackController
+public class viewDealerListController
 {
     @javafx.fxml.FXML
-    private TextArea yourFeedbackTA;
+    private TableColumn phoneTVColumn;
     @javafx.fxml.FXML
-    private AnchorPane feedbackAnchor;
+    private TableColumn dealerNameTVColumn;
     @javafx.fxml.FXML
-    private ComboBox completeOrderCB;
+    private TableColumn dealerIdTVColumn;
+    @javafx.fxml.FXML
+    private TableColumn addressTVColumn;
+    @javafx.fxml.FXML
+    private TableView tableView;
+    @javafx.fxml.FXML
+    private AnchorPane viewDealerListAnchor;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -30,13 +36,9 @@ public class provideFeedbackController
                 ("/cse213/cement_factory/Maliha_2420913/salesExecutivedashboard.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
-        Stage stage = (Stage) feedbackAnchor.getScene().getWindow();
+        Stage stage = (Stage) viewDealerListAnchor.getScene().getWindow();
         stage.setTitle("Add New Dealer");
         stage.setScene(scene);
         stage.show();
-    }
-
-    @javafx.fxml.FXML
-    public void submitFeedbackButton(ActionEvent actionEvent) {
     }
 }
