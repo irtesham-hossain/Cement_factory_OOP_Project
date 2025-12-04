@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.addNewDealerController">
+<AnchorPane fx:id="addDealerAnchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maliha_2420913.addNewDealerController">
    <children>
       <Label layoutX="57.0" layoutY="119.0" prefHeight="18.0" prefWidth="42.0" text="Name:" />
       <Label layoutX="57.0" layoutY="164.0" prefHeight="18.0" prefWidth="49.0" text="Contact:" />
@@ -21,7 +20,6 @@
          </font>
       </Label>
       <Button layoutX="152.0" layoutY="260.0" mnemonicParsing="false" onAction="#saveInfoButtonOnAction" prefHeight="26.0" prefWidth="120.0" text="Save Information" />
-      <Label fx:id="outputLabel" layoutX="312.0" layoutY="260.0" prefHeight="26.0" prefWidth="120.0" text="Output" textFill="#bfbbbb" />
       <Button layoutX="490.0" layoutY="340.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="26.0" prefWidth="63.0" text="Back" />
    </children>
 </AnchorPane>
