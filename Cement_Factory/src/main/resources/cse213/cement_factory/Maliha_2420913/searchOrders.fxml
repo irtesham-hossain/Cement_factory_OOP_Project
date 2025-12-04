@@ -19,7 +19,7 @@
             <columns>
                 <TableColumn fx:id="orderIDTVColumn" prefWidth="73.60003662109375" text="Order ID" />
                 <TableColumn fx:id="orderDateTVColumn" prefWidth="83.19995880126953" text="Order Date" />
-                <TableColumn fx:id="customerNameTVColumn" prefWidth="103.2000732421875" text="Dealer Name" />
+                <TableColumn fx:id="dealerNameTVColumn" prefWidth="103.2000732421875" text="Dealer Name" />
                 <TableColumn fx:id="productTypeTVColumn" prefWidth="97.60003662109375" text="Product Type" />
                 <TableColumn fx:id="quantityTVColumn" prefWidth="64.0" text="Quantity" />
                 <TableColumn fx:id="totalPriceTVColumn" prefWidth="80.79995727539062" text="Total Price" />

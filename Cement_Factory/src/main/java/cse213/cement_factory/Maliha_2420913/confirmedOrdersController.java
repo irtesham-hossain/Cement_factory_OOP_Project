@@ -7,38 +7,43 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class confirmedOrdersController
 {
     @javafx.fxml.FXML
-    private TableColumn productTypeTVColumn;
+    private TableColumn<Order,String> productTypeTVColumn;
     @javafx.fxml.FXML
-    private TableColumn orderIDTVColumn;
+    private TableColumn<Order,Integer> orderIDTVColumn;
     @javafx.fxml.FXML
-    private TableColumn totalPriceTVColumn;
+    private TableColumn<Order,Integer> totalPriceTVColumn;
     @javafx.fxml.FXML
-    private TableColumn customerNameTVColumn;
+    private TableColumn<Order,String> customerNameTVColumn;
     @javafx.fxml.FXML
-    private TableColumn quantityTVColumn;
+    private TableColumn<Order,Integer> quantityTVColumn;
     @javafx.fxml.FXML
-    private TableView tableView;
+    private TableView<Order> tableView;
     @javafx.fxml.FXML
-    private TableColumn orderDateTVColumn;
+    private TableColumn<Order, LocalDate> orderDateTVColumn;
     @javafx.fxml.FXML
-    private TableColumn deliveryStatusTVColumn;
+    private TableColumn<Order,String> deliveryStatusTVColumn;
     @javafx.fxml.FXML
     private AnchorPane COAnchor;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
-
-    @Deprecated
-    public void viewConfirmedOrdersOnActionButton(ActionEvent actionEvent) {
+        orderIDTVColumn.setCellValueFactory(new PropertyValueFactory<>("orderId"));
+        orderDateTVColumn.setCellValueFactory(new PropertyValueFactory<>("orderDate"));
+        quantityTVColumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+        totalPriceTVColumn.setCellValueFactory(new PropertyValueFactory<>("totalPrice"));
+        customerNameTVColumn.setCellValueFactory(new PropertyValueFactory<>("dealerName"));
+        productTypeTVColumn.setCellValueFactory(new PropertyValueFactory<>("productType"));
+        deliveryStatusTVColumn.setCellValueFactory(new PropertyValueFactory<>("deliveryStatus"));
     }
 
     @javafx.fxml.FXML

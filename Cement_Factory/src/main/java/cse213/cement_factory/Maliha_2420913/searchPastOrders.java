@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -15,22 +16,27 @@ import java.io.IOException;
 public class searchPastOrders
 {
     @javafx.fxml.FXML
-    private TableColumn productTypeTVColumn;
+    private TableColumn<Order,String> productTypeTVColumn;
     @javafx.fxml.FXML
     private AnchorPane pastOrdersAnchor;
     @javafx.fxml.FXML
-    private TableColumn quantityTVColumn;
+    private TableColumn<Order,Integer> quantityTVColumn;
     @javafx.fxml.FXML
     private DatePicker enterDateDP;
     @javafx.fxml.FXML
-    private TableColumn totalAmountTVColumn;
+    private TableColumn<Order,Integer> totalAmountTVColumn;
     @javafx.fxml.FXML
-    private TableView TableView;
+    private TableView<Order> TableView;
     @javafx.fxml.FXML
-    private TableColumn orderIdTVColumn;
+    private TableColumn<Order,Integer> orderIdTVColumn;
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        orderIdTVColumn.setCellValueFactory(new PropertyValueFactory<>("orderId"));
+        productTypeTVColumn.setCellValueFactory(new PropertyValueFactory<>("productType"));
+        quantityTVColumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+        totalAmountTVColumn.setCellValueFactory(new PropertyValueFactory<>("totalPrice"));
     }
 
     @javafx.fxml.FXML
