@@ -9,7 +9,15 @@ public class ProductionRecord  implements Serializable {
     private int amount_produced;
 //    private int efficiency_stats;
     private int target_production;
+    private int cementBag;
 
+    public int getCementBag() {
+        return cementBag;
+    }
+
+    public void setCementBag(int cementBag) {
+        this.cementBag = cementBag;
+    }
 
     public LocalDate getProduction_date() {
         return production_date;
@@ -51,11 +59,14 @@ public class ProductionRecord  implements Serializable {
         this.target_production = target_production;
     }
 
-    public ProductionRecord(LocalDate production_date, int shift, int amount_produced, int target_production) {
+    public ProductionRecord(LocalDate production_date, int shift, int amount_produced,int target_production) {
         this.production_date = production_date;
         this.shift = shift;
         this.amount_produced = amount_produced;
-//        this.efficiency_stats = efficiency_stats;
-        this.target_production = target_production;
+        this.target_production= target_production;
+
     }
+
+
+
 }
