@@ -2,7 +2,9 @@ package cse213.cement_factory.Maliha_2420913;
 
 import cse213.cement_factory.main.User;
 
-public class Dealer extends User {
+import java.io.Serializable;
+
+public class Dealer extends User implements Serializable {
     private int contact;
     private String address;
 
@@ -40,4 +42,11 @@ public class Dealer extends User {
         this.contact = contact;
         this.address = address;
     }
+
+    public Dealer(String name, String address, int contact){
+        super(0, name, "Dealer", "default123"); // default userId and password
+        this.contact = contact;
+        this.address = address;
+    }
+
 }

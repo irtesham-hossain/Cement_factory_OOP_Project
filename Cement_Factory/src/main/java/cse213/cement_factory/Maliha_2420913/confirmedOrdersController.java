@@ -11,7 +11,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.*;
 import java.time.LocalDate;
 
 public class confirmedOrdersController
@@ -44,6 +44,29 @@ public class confirmedOrdersController
         customerNameTVColumn.setCellValueFactory(new PropertyValueFactory<>("dealerName"));
         productTypeTVColumn.setCellValueFactory(new PropertyValueFactory<>("productType"));
         deliveryStatusTVColumn.setCellValueFactory(new PropertyValueFactory<>("deliveryStatus"));
+
+
+        try (FileInputStream fis = new FileInputStream("Order.bin");
+             ObjectInputStream ois = new ObjectInputStream(fis)) {
+
+            while (true) {
+                try {
+                  Order order = (Order) ois.readObject();
+                  tableView.getItems().add(order);
+                }
+                catch (EOFException e) {
+                    break;
+                } }
+
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
+
+
+
+
     }
 
     @javafx.fxml.FXML

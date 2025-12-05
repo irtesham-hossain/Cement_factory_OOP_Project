@@ -6,6 +6,7 @@ public class Order {
     private int orderId, quantity, totalPrice;
     private String dealerName, productType, deliveryStatus;
     private LocalDate orderDate;
+    private String location;
 
     public int getOrderId() {
         return orderId;
@@ -63,6 +64,13 @@ public class Order {
         this.orderDate = orderDate;
     }
 
+    public String getLocation() {
+        return location;
+    }
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
     @Override
     public String toString() {
         return "Order{" +
@@ -73,10 +81,12 @@ public class Order {
                 ", productType='" + productType + '\'' +
                 ", deliveryStatus='" + deliveryStatus + '\'' +
                 ", orderDate=" + orderDate +
+                "location='" + location +
                 '}';
     }
 
-    public Order(int orderId, int quantity, int totalPrice, String dealerName, String productType, String deliveryStatus, LocalDate orderDate) {
+
+    public Order(int orderId, int quantity, int totalPrice, String dealerName, String productType, String deliveryStatus, LocalDate orderDate, String location) {
         this.orderId = orderId;
         this.quantity = quantity;
         this.totalPrice = totalPrice;
@@ -84,5 +94,12 @@ public class Order {
         this.productType = productType;
         this.deliveryStatus = deliveryStatus;
         this.orderDate = orderDate;
+        this.location = location;
+    }
+
+    public Order( String productType, int quantity, String location){
+        this.productType = productType;
+        this.quantity = quantity;
+        this.location = location;
     }
 }

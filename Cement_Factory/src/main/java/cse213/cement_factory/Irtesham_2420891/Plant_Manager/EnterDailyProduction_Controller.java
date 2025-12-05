@@ -72,14 +72,14 @@ public class EnterDailyProduction_Controller {
         if (pr.exists()) {
             FileOutputStream fos = new FileOutputStream(pr, true);
             ObjectOutputStream obs = new AppendableObjectOutputStream(fos);
-            obs.writeObject(new ProductionRecord(productionDate.getValue(), shift_number, Integer.parseInt(ProducedAmountTF.getText()), 0));
+            obs.writeObject(new ProductionRecord(productionDate.getValue(), shift_number, Integer.parseInt(ProducedAmountTF.getText()),0));
             obs.close();
             Info("Production is Recorded");
         }
         else {
             FileOutputStream fos = new FileOutputStream("ProductionRecord.bin");
             ObjectOutputStream obs = new ObjectOutputStream(fos);
-            obs.writeObject(new ProductionRecord (productionDate.getValue(), shift_number, Integer.parseInt(ProducedAmountTF.getText()), 0));
+            obs.writeObject(new ProductionRecord (productionDate.getValue(), shift_number, Integer.parseInt(ProducedAmountTF.getText()),0));
             Info("Attendance is Recorded");
             obs.close();
         }

@@ -4,6 +4,7 @@ import cse213.cement_factory.main.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -16,7 +17,7 @@ public class placeNewOrderController
     @javafx.fxml.FXML
     private TextField locationTF;
     @javafx.fxml.FXML
-    private ComboBox productTypeCB;
+    private ComboBox<String> productTypeCB;
     @javafx.fxml.FXML
     private TextField quantityTF;
     @javafx.fxml.FXML
@@ -28,6 +29,13 @@ public class placeNewOrderController
 
     @javafx.fxml.FXML
     public void enterbutton(ActionEvent actionEvent) {
+       if(productTypeCB.getValue().isEmpty() || Integer.parseInt(quantityTF.getText()) < 0) {
+           Info("Enter valid Order details");
+           return;
+
+        }
+
+
     }
 
     @javafx.fxml.FXML
@@ -41,4 +49,11 @@ public class placeNewOrderController
         stage.setScene(scene);
         stage.show();
     }
-}
+
+    public void Info(String s) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText(s);
+        alert.showAndWait();
+
+
+    }}

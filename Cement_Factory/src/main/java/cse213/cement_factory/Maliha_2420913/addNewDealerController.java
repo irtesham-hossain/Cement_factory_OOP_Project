@@ -1,5 +1,6 @@
 package cse213.cement_factory.Maliha_2420913;
 
+import cse213.cement_factory.Irtesham_2420891.Plant_Manager.AttendanceRecord;
 import cse213.cement_factory.main.AppendableObjectOutputStream;
 import cse213.cement_factory.main.HelloApplication;
 import javafx.event.ActionEvent;
@@ -49,32 +50,30 @@ public class addNewDealerController
 
     @javafx.fxml.FXML
     public void saveInfoButtonOnAction(ActionEvent actionEvent) throws IOException {
-        String name = nameTF.getText();
-        String address = addressTF.getText();
-        String contact = contactTF.getText();
-
-        File file = new File("AddNewDealer.bin");
-        FileOutputStream fos = null;
-        ObjectOutputStream oos = null;
-
-
-        if(file.exists()){
-            fos = new FileOutputStream(file, true);
-            oos =new AppendableObjectOutputStream(fos);
-           // oos.writeObject(new newDealer(name,contact,address));
+        if ( nameTF.getText().isEmpty() ||  addressTF.getText().isEmpty() || contactTF.getText().isEmpty()){
+            Info("Please Enter All Information");
+            return;
         }
-        else{
-            fos = new FileOutputStream("AddNewDealer.bin");
-            oos = new ObjectOutputStream(fos);
 
+        Dealer dealer = new Dealer(
+        nameTF.getText(), addressTF.getText(),Integer.parseInt(contactTF.getText()));
 
+        File file = new File("addNewDealer.bin");
+
+        if(file.exists()) {
+            FileOutputStream fos= new FileOutputStream(file,true);
+            ObjectOutputStream obs =new AppendableObjectOutputStream(fos);
+            obs.writeObject(dealer);
+            obs.close();
+            Info("Dealer added");
         }
-        oos.writeObject(new newDealer(name,contact,address));
-        Info("Added");
-        oos.close();
-
-
-
+        else {
+            FileOutputStream fos = new FileOutputStream("addNewDealer.bin");
+            ObjectOutputStream obs = new ObjectOutputStream(fos);
+            obs.writeObject(dealer);
+            obs.close();
+            Info("Dealer added");
+        }
     }
 
     public void Info(String s) {
