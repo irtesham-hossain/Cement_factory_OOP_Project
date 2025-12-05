@@ -14,15 +14,15 @@ import java.io.IOException;
 public class viewDealerListController
 {
     @javafx.fxml.FXML
-    private TableColumn phoneTVColumn;
+    private TableColumn<Dealer,String> phoneTVColumn;
     @javafx.fxml.FXML
-    private TableColumn dealerNameTVColumn;
+    private TableColumn<Dealer,String> dealerNameTVColumn;
     @javafx.fxml.FXML
-    private TableColumn dealerIdTVColumn;
+    private TableColumn<Dealer,Integer> dealerIdTVColumn;
     @javafx.fxml.FXML
-    private TableColumn addressTVColumn;
+    private TableColumn<Dealer,String> addressTVColumn;
     @javafx.fxml.FXML
-    private TableView tableView;
+    private TableView<Dealer> tableView;
     @javafx.fxml.FXML
     private AnchorPane viewDealerListAnchor;
 

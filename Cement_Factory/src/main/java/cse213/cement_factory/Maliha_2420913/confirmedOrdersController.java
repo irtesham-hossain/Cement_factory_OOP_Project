@@ -1,6 +1,9 @@
 package cse213.cement_factory.Maliha_2420913;
 
+import cse213.cement_factory.main.AppendableObjectOutputStream;
 import cse213.cement_factory.main.HelloApplication;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -35,6 +38,7 @@ public class confirmedOrdersController
     @javafx.fxml.FXML
     private AnchorPane COAnchor;
 
+
     @javafx.fxml.FXML
     public void initialize() {
         orderIDTVColumn.setCellValueFactory(new PropertyValueFactory<>("orderId"));
@@ -46,27 +50,26 @@ public class confirmedOrdersController
         deliveryStatusTVColumn.setCellValueFactory(new PropertyValueFactory<>("deliveryStatus"));
 
 
-        try (FileInputStream fis = new FileInputStream("Order.bin");
-             ObjectInputStream ois = new ObjectInputStream(fis)) {
 
-            while (true) {
+        ObservableList<Order> orders = FXCollections.observableArrayList();
+        File file = new File("Order.bin");
+
+        if(file.exists()) {
+            try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
+              while(true) {
                 try {
-                  Order order = (Order) ois.readObject();
-                  tableView.getItems().add(order);
-                }
-                catch (EOFException e) {
-                    break;
-                } }
-
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
+                 Order order = (Order) ois.readObject();
+                 orders.add(order);
+        } catch (EOFException e) {
+               break;
+        }}
+        }
+          catch (IOException | ClassNotFoundException e) {
+                //
+        }
         }
 
-
-
-
-
-
+        tableView.setItems(orders);
     }
 
     @javafx.fxml.FXML
@@ -81,4 +84,5 @@ public class confirmedOrdersController
         stage.setScene(scene);
         stage.show();
     }
+
 }

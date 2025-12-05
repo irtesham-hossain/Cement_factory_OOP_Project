@@ -4,13 +4,12 @@ import cse213.cement_factory.main.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class viewSalesReport
 {
@@ -32,22 +31,23 @@ public class viewSalesReport
     private AnchorPane viewSalesReportAnchor;
     @javafx.fxml.FXML
     private TableColumn orderIdTVColumn;
+    @javafx.fxml.FXML
+    private DatePicker endDateDP;
+    @javafx.fxml.FXML
+    private DatePicker selectDateDP;
+    @javafx.fxml.FXML
+    private ComboBox selectMonthCB;
+    @javafx.fxml.FXML
+    private DatePicker startDateDP;
+    @javafx.fxml.FXML
+    private ComboBox reportTypeCB;
 
     @javafx.fxml.FXML
     public void initialize() {
+        reportTypeCB.getItems().addAll("Daily","Monthly","Weekly");
+
     }
 
-    @javafx.fxml.FXML
-    public void endDateDP(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void selectMonthCB(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void selectDateDP(ActionEvent actionEvent) {
-    }
 
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) throws IOException {
@@ -60,16 +60,31 @@ public class viewSalesReport
         stage.setScene(scene);
         stage.show();
     }
+   // private ArrayList<Report> salesReport = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void generateReportButtonOnAction(ActionEvent actionEvent) {
-    }
+            String type = reportTypeCB.getValue();
 
-    @javafx.fxml.FXML
-    public void reportTypeCB(ActionEvent actionEvent) {
-    }
+            // First, disable all inputs
+            selectDateDP.setDisable(true);
+            startDateDP.setDisable(true);
+            selectMonthCB.setDisable(true);
 
-    @javafx.fxml.FXML
-    public void startDateDP(ActionEvent actionEvent) {
-    }
-}
+            // Enable only the relevant input
+            if ("Daily".equals(type)) {
+                selectDateDP.setDisable(false);
+            } else if ("Weekly".equals(type)) {
+                startDateDP.setDisable(false);
+            } else if ("Monthly".equals(type)) {
+                selectMonthCB.setDisable(false);
+            }
+        }
+
+
+        }
+
+
+
+
+

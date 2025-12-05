@@ -10,21 +10,22 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class viewPaymentHistoryController
 {
     @javafx.fxml.FXML
     private AnchorPane viewPaymentAnchor;
     @javafx.fxml.FXML
-    private TableView tableView;
+    private TableView<Payment> tableView;
     @javafx.fxml.FXML
-    private TableColumn DateTVColumn;
+    private TableColumn<Payment,LocalDate> DateTVColumn;
     @javafx.fxml.FXML
-    private TableColumn totalAmountTVColumn;
+    private TableColumn<Payment,Integer> totalAmountTVColumn;
     @javafx.fxml.FXML
-    private TableColumn paymentMethodTVColumn;
+    private TableColumn<Payment,String> paymentMethodTVColumn;
     @javafx.fxml.FXML
-    private TableColumn orderIdTVColumn;
+    private TableColumn<Payment,Integer> orderIdTVColumn;
 
     @javafx.fxml.FXML
     public void initialize() {

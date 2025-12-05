@@ -14,7 +14,7 @@ import java.io.IOException;
 public class makePaymentController
 {
     @javafx.fxml.FXML
-    private ComboBox pendingOrdersCB;
+    private ComboBox<String> pendingOrdersCB;
     @javafx.fxml.FXML
     private Label showOutputL;
     @javafx.fxml.FXML
@@ -22,6 +22,7 @@ public class makePaymentController
 
     @javafx.fxml.FXML
     public void initialize() {
+        pendingOrdersCB.getValue();
     }
 
     @javafx.fxml.FXML

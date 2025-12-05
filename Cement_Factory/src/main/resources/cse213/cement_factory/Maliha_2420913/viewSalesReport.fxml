@@ -20,13 +20,13 @@
       <Label layoutX="59.0" layoutY="143.0" text="Select Date:" />
       <Label layoutX="59.0" layoutY="187.0" text="Select Week:" />
       <Label layoutX="65.0" layoutY="293.0" text="Select Month:" />
-      <ComboBox layoutX="138.0" layoutY="96.0" onAction="#reportTypeCB" prefWidth="150.0" />
-      <DatePicker layoutX="137.0" layoutY="139.0" onAction="#selectDateDP" />
-      <DatePicker layoutX="110.0" layoutY="224.0" onAction="#startDateDP" />
-      <DatePicker layoutX="371.0" layoutY="224.0" onAction="#endDateDP" />
+      <ComboBox fx:id="reportTypeCB" layoutX="138.0" layoutY="96.0" prefWidth="150.0" />
+      <DatePicker fx:id="selectDateDP" layoutX="137.0" layoutY="139.0" />
+      <DatePicker fx:id="startDateDP" layoutX="110.0" layoutY="224.0" />
+      <DatePicker fx:id="endDateDP" layoutX="371.0" layoutY="224.0" />
       <Label layoutX="65.0" layoutY="228.0" text="Start:" />
       <Label layoutX="328.0" layoutY="228.0" text="End:" />
-      <ComboBox layoutX="150.0" layoutY="289.0" onAction="#selectMonthCB" prefWidth="150.0" />
+      <ComboBox fx:id="selectMonthCB" layoutX="150.0" layoutY="289.0" prefWidth="150.0" />
       <TableView fx:id="tableView" layoutX="56.0" layoutY="389.0" prefHeight="200.0" prefWidth="606.0">
         <columns>
           <TableColumn fx:id="orderIdTVColumn" prefWidth="99.19997787475586" text="Order ID" />
