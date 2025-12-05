@@ -5,7 +5,7 @@ import java.io.Serializable;
 public abstract class User implements Serializable {
     protected final int userId;
     protected String password;
-    protected final String name;
+//    protected final String name;
     protected final String userType;
 
 
@@ -21,19 +21,21 @@ public abstract class User implements Serializable {
         this.password = password;
     }
 
-    public String getName() {
-        return name;
-    }
+//    public String getName() {
+//        return name;
+//    }
 
     public String getUserType() {
         return userType;
     }
 
-    public User(int userId, String name, String userType, String password) {
+    public User(int userId, String userType, String password) {
         this.userId = userId;
-        this.name = name;
+//        this.name = name;
         this.userType = userType;
         this.password = password;
     }
+
 }
+
 

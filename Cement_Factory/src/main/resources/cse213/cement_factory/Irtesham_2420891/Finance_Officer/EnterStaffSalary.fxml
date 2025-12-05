@@ -8,20 +8,20 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Irtesham_2420891.Finance_Officer.EnterStaffSalary_Controller">
+<AnchorPane fx:id="staffSalaryAnchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Irtesham_2420891.Finance_Officer.EnterStaffSalary_Controller">
     <children>
-        <Button layoutX="220.0" layoutY="244.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" text="Submit Salary" />
+        <Button fx:id="SubmitSalaryButton" layoutX="220.0" layoutY="244.0" mnemonicParsing="false" onAction="#SubmitSalaryONA" prefHeight="25.0" prefWidth="160.0" text="Submit Salary" />
         <Text layoutX="152.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Staff Salary " textAlignment="CENTER" wrappingWidth="339.74151611328125">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Button layoutX="14.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Back" />
-        <TextField layoutX="122.0" layoutY="163.0" />
-        <Label layoutX="60.0" layoutY="145.0" prefHeight="17.0" prefWidth="149.0" text="Staff Name:" />
-        <TextField layoutX="384.0" layoutY="154.0" />
+        <Button fx:id="backButton" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#backONA" prefHeight="25.0" prefWidth="57.0" text="Back" />
+        <TextField fx:id="staffIDTF" layoutX="122.0" layoutY="163.0" />
+        <Label layoutX="60.0" layoutY="145.0" prefHeight="17.0" prefWidth="149.0" text="Staff ID:" />
+        <TextField fx:id="salaryTF" layoutX="384.0" layoutY="154.0" />
         <Label layoutX="322.0" layoutY="136.0" prefHeight="17.0" prefWidth="175.0" text="Salary Amount:" />
-        <ComboBox layoutX="384.0" layoutY="200.0" prefWidth="150.0" />
+        <ComboBox fx:id="departmentCombo" layoutX="384.0" layoutY="200.0" prefWidth="150.0" />
         <Label layoutX="368.0" layoutY="182.0" prefHeight="17.0" prefWidth="103.0" text="Staff Department:" />
     </children>
 </AnchorPane>

@@ -29,7 +29,7 @@ public class productAvailibilityController
 
     @javafx.fxml.FXML
     public void initialize() {
-        reportType.getItems().addAll("OPC","PPC","SRC","White Cement");
+//        reportType.getItems().addAll("OPC","PPC","SRC","White Cement");
     }
 
     @javafx.fxml.FXML
