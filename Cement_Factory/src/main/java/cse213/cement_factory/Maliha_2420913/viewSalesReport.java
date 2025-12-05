@@ -36,11 +36,11 @@ public class viewSalesReport
     @javafx.fxml.FXML
     private DatePicker selectDateDP;
     @javafx.fxml.FXML
-    private ComboBox selectMonthCB;
+    private ComboBox<String> selectMonthCB;
     @javafx.fxml.FXML
     private DatePicker startDateDP;
     @javafx.fxml.FXML
-    private ComboBox reportTypeCB;
+    private ComboBox<String> reportTypeCB;
 
     @javafx.fxml.FXML
     public void initialize() {

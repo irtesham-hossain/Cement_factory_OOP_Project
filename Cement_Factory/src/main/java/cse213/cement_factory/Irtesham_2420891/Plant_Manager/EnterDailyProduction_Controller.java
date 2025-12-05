@@ -1,9 +1,15 @@
 package cse213.cement_factory.Irtesham_2420891.Plant_Manager;
 
 import cse213.cement_factory.main.AppendableObjectOutputStream;
+import cse213.cement_factory.main.HelloApplication;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import cse213.cement_factory.Irtesham_2420891.Plant_Manager.ProductionRecord;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -24,6 +30,10 @@ public class EnterDailyProduction_Controller {
     private RadioButton shift_2;
     @javafx.fxml.FXML
     private RadioButton shift_3;
+    @javafx.fxml.FXML
+    private Button backButon;
+    @javafx.fxml.FXML
+    private AnchorPane dailyProductionAnchor;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -72,14 +82,14 @@ public class EnterDailyProduction_Controller {
         if (pr.exists()) {
             FileOutputStream fos = new FileOutputStream(pr, true);
             ObjectOutputStream obs = new AppendableObjectOutputStream(fos);
-            obs.writeObject(new ProductionRecord(productionDate.getValue(), shift_number, Integer.parseInt(ProducedAmountTF.getText()),0));
+            obs.writeObject(new ProductionRecord(productionDate.getValue(), shift_number, Integer.parseInt(ProducedAmountTF.getText())));
             obs.close();
             Info("Production is Recorded");
         }
         else {
             FileOutputStream fos = new FileOutputStream("ProductionRecord.bin");
             ObjectOutputStream obs = new ObjectOutputStream(fos);
-            obs.writeObject(new ProductionRecord (productionDate.getValue(), shift_number, Integer.parseInt(ProducedAmountTF.getText()),0));
+            obs.writeObject(new ProductionRecord (productionDate.getValue(), shift_number, Integer.parseInt(ProducedAmountTF.getText())));
             Info("Attendance is Recorded");
             obs.close();
         }
@@ -89,5 +99,19 @@ public class EnterDailyProduction_Controller {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText(s);
         alert.showAndWait();
+    }
+
+    @javafx.fxml.FXML
+    public void backONA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/cse213/cement_factory/Irtesham_2420891/Plant_Manager/Plant_Manager_dashboard.fxml")
+        );
+
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = (Stage) dailyProductionAnchor.getScene().getWindow();
+        stage.setTitle("Plant Manager Dashboard");
+        stage.setScene(scene);
+        stage.show();
+
     }
 }

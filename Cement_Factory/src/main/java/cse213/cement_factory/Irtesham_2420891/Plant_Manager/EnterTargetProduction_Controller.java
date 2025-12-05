@@ -62,14 +62,16 @@ public class EnterTargetProduction_Controller
         if (pr.exists()){
             FileOutputStream fos = new FileOutputStream(pr, true);
             ObjectOutputStream obs = new AppendableObjectOutputStream(fos);
-            obs.writeObject(new ProductionRecord(trDate,shift,amProduced,Integer.parseInt(targetProductionAmount.getText())));
+//            obs.writeObject(new ProductionRecord(trDate,shift,amProduced,Integer.parseInt(targetProductionAmount.getText())));
+            obs.writeObject(new ProductionRecord(trDate,Integer.parseInt(targetProductionAmount.getText())));
             obs.close();
             Info("Target Production is Recorded");
         }
         else{
             FileOutputStream fos = new FileOutputStream("ProductionRecord.bin");
             ObjectOutputStream obs = new ObjectOutputStream(fos);
-            obs.writeObject(new ProductionRecord(trDate,shift,amProduced,Integer.parseInt(targetProductionAmount.getText())));
+//            obs.writeObject(new ProductionRecord(trDate,shift,amProduced,Integer.parseInt(targetProductionAmount.getText())));
+            obs.writeObject(new ProductionRecord(trDate,Integer.parseInt(targetProductionAmount.getText())));
             Info("Target Production is Recorded");
             obs.close();
         }

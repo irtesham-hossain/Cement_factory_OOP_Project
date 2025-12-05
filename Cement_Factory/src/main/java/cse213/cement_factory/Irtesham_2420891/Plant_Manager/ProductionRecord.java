@@ -59,14 +59,14 @@ public class ProductionRecord  implements Serializable {
         this.target_production = target_production;
     }
 
-    public ProductionRecord(LocalDate production_date, int shift, int amount_produced,int target_production) {
+    public ProductionRecord(LocalDate production_date, int shift, int amount_produced) {
         this.production_date = production_date;
         this.shift = shift;
         this.amount_produced = amount_produced;
-        this.target_production= target_production;
-
     }
 
-
-
+    public ProductionRecord(LocalDate production_date, int target_production) {
+        this.production_date = production_date;
+        this.target_production = target_production;
+    }
 }
