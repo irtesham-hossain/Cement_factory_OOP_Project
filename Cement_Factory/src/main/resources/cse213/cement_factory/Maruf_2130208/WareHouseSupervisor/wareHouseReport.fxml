@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maruf_2130208.WareHouseSupervisor.WareHouseReportcontroller">
+   <children>
+      <Label layoutX="236.0" layoutY="51.0" text="WareHouse report" />
+      <DatePicker layoutX="78.0" layoutY="104.0" onAction="#fromdateDatePicker" />
+      <DatePicker layoutX="327.0" layoutY="104.0" onAction="#todateDatePicker" />
+      <Label layoutX="285.0" layoutY="109.0" text="To" />
+      <Label layoutX="38.0" layoutY="109.0" text="From" />
+      <Button layoutX="375.0" layoutY="175.0" mnemonicParsing="false" onAction="#generateReportOnCick" text="Generate Report" />
+      <TextArea fx:id="statusTextarea" layoutX="52.0" layoutY="175.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="113.0" layoutY="152.0" text="Status" />
+      <Button layoutX="401.0" layoutY="237.0" mnemonicParsing="false" onAction="#printonclik" text="Print" />
+      <Button layoutX="402.0" layoutY="288.0" mnemonicParsing="false" onAction="#exportOnClick" text="Export" />
+   </children>
+</AnchorPane>

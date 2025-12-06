@@ -56,7 +56,7 @@ public class updatePersonalInfoController
             Info("Information is Updated");
             obs.close();
         }
-        
+
     }
 
     @javafx.fxml.FXML

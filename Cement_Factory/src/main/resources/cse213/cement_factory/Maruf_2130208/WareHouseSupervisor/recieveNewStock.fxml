@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maruf_2130208.WareHouseSupervisor.recieveNewStockcontroller">
+   <children>
+      <Label layoutX="235.0" layoutY="29.0" text="recieve New Product" />
+      <ComboBox layoutX="44.0" layoutY="64.0" onAction="#productTypeCombobox" prefWidth="150.0" promptText="Product Type" />
+      <TextField fx:id="batchNoTextField" layoutX="171.0" layoutY="125.0" />
+      <Text layoutX="61.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Batch no" />
+      <TextField fx:id="quantityTextField" layoutX="173.0" layoutY="174.0" />
+      <Text layoutX="61.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" />
+      <DatePicker layoutX="157.0" layoutY="224.0" onAction="#arrivalDateDatePicker" />
+      <Text layoutX="61.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arrival Date" />
+      <Button layoutX="393.0" layoutY="284.0" mnemonicParsing="false" onAction="#recieveStockOnClick" text="Recieve  And Update stock" />
+   </children>
+</AnchorPane>

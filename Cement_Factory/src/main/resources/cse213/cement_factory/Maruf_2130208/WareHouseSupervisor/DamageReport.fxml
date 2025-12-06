@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Maruf_2130208.WareHouseSupervisor.DamageReportcontroller">
+   <children>
+      <Label layoutX="233.0" layoutY="23.0" text="damage Report" />
+      <ComboBox layoutX="72.0" layoutY="73.0" onAction="#producthandler" prefWidth="150.0" promptText="Product" />
+      <Text layoutX="74.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Batch No" />
+      <TextField fx:id="batchNoTextField" layoutX="190.0" layoutY="144.0" />
+      <TextField fx:id="damageQuantityTextField" layoutX="190.0" layoutY="180.0" />
+      <TextField fx:id="damageReasonTextField" layoutX="190.0" layoutY="219.0" />
+      <Text layoutX="70.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Damage Quantitiy" />
+      <Text layoutX="72.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Damage Reason" />
+      <Button layoutX="410.0" layoutY="315.0" mnemonicParsing="false" onAction="#reportDamageOnClick" text="Report Damage" />
+   </children>
+</AnchorPane>
