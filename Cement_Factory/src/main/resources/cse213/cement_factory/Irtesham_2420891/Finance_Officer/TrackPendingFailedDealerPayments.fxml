@@ -7,13 +7,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Irtesham_2420891.Finance_Officer.TrackPendingFailedDealerPayments_Controller">
+<AnchorPane fx:id="anchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Irtesham_2420891.Finance_Officer.TrackPendingFailedDealerPayments_Controller">
     <children>
-        <TableView layoutX="51.0" layoutY="100.0" prefHeight="200.0" prefWidth="483.0">
+        <TableView fx:id="DealerFailedPaymentTV" layoutX="51.0" layoutY="100.0" prefHeight="200.0" prefWidth="483.0">
             <columns>
-                <TableColumn prefWidth="175.33334350585938" text="Dealer Name" />
-                <TableColumn prefWidth="162.6666259765625" text="Amount Not Paid" />
-            <TableColumn prefWidth="144.66668701171875" text="Total Bill Amount :" />
+                <TableColumn fx:id="nameCol" prefWidth="175.33334350585938" text="Dealer Name" />
+                <TableColumn fx:id="amountNotPaidCol" prefWidth="162.6666259765625" text="Amount Not Paid" />
+            <TableColumn fx:id="TotalBillCol" prefWidth="144.66668701171875" text="Total Bill Amount :" />
             </columns>
         </TableView>
         <Text layoutX="166.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Track Pending or Failed Dealer`s Payments" textAlignment="CENTER" wrappingWidth="344.408203125">
@@ -21,9 +21,6 @@
                 <Font size="18.0" />
             </font>
         </Text>
-        <Button layoutX="15.0" layoutY="348.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" text="Clear Table" />
-        <Button layoutX="14.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Back" />
-      <Button layoutX="51.0" layoutY="63.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" text="Filter Oldest 5 Due" />
-      <Button layoutX="374.0" layoutY="63.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" text="Reset Table" />
+        <Button layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#BackONA" prefHeight="25.0" prefWidth="57.0" text="Back" />
     </children>
 </AnchorPane>

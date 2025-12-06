@@ -102,7 +102,7 @@ public class PlantMangerDashboard_Controller
 
     @javafx.fxml.FXML
     public void trackRawMatterialONA(ActionEvent actionEvent) throws IOException {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/cse213/cement_factory/Irtesham_2420891/Plant_Manager/TrackRawMaterialConsumption.fxml")
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/cse213/cement_factory/Irtesham_2420891/Plant_Manager/EnterRawMaterialConsumption.fxml")
             );
 
             Scene scene = new Scene(fxmlLoader.load());

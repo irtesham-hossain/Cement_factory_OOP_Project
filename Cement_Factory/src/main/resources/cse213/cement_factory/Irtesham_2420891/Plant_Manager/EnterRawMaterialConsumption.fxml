@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Irtesham_2420891.Plant_Manager.EnterRawMaterialConsumption_Controller">
+    <children>
+        <Text layoutX="183.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Track Raw Material Consumption" textAlignment="CENTER" wrappingWidth="248.408203125">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Button layoutX="193.0" layoutY="221.0" mnemonicParsing="false" onAction="#AddONA" prefHeight="25.0" prefWidth="227.0" text="Add " />
+        <Button layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#BackONA" prefHeight="25.0" prefWidth="57.0" text="Back" />
+      <TextField fx:id="limeStoneTF" layoutX="84.0" layoutY="99.0" />
+      <TextField fx:id="GypsumTF" layoutX="441.0" layoutY="99.0" />
+      <Label layoutX="10.0" layoutY="80.0" text=" Limestone Used For Production" />
+      <Label layoutX="324.0" layoutY="80.0" text="Gypsum Used For Production" />
+      <DatePicker fx:id="date" layoutX="71.0" layoutY="135.0" />
+      <Label layoutX="34.0" layoutY="139.0" text="Date:" />
+    </children>
+</AnchorPane>

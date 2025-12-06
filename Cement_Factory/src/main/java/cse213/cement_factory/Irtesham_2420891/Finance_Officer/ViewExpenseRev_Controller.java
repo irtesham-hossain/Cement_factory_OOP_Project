@@ -5,13 +5,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.*;
 
-public class ViewExpenseRev_Controller
-{
+public class ViewExpenseRev_Controller {
     @javafx.fxml.FXML
     private AnchorPane showExRevAnchor;
     @javafx.fxml.FXML
@@ -21,66 +21,91 @@ public class ViewExpenseRev_Controller
     @javafx.fxml.FXML
     private TableView<monthlySummary> RevExTV;
     @javafx.fxml.FXML
-    private TableColumn<monthlySummary,Double> expenseCol;
+    private TableColumn<monthlySummary, Double> expenseCol;
     @javafx.fxml.FXML
-    private TableColumn<monthlySummary,Double> RevenueCol;
+    private TableColumn<monthlySummary, Double> RevenueCol;
 
     @javafx.fxml.FXML
     public void initialize() {
+        expenseCol.setCellValueFactory(new PropertyValueFactory<>("totalExpense"));
+        RevenueCol.setCellValueFactory(new PropertyValueFactory<>("totalRevenue"));
 
     }
 
     @javafx.fxml.FXML
     public void backONA(ActionEvent actionEvent) throws IOException {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/cse213/cement_factory/Irtesham_2420891/Finance_Officer/FinanceOfficer_dashboard.fxml")
-            );
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/cse213/cement_factory/Irtesham_2420891/Finance_Officer/FinanceOfficer_dashboard.fxml")
+        );
 
-            Scene scene = new Scene(fxmlLoader.load());
+        Scene scene = new Scene(fxmlLoader.load());
 
-            Stage stage = (Stage) showExRevAnchor.getScene().getWindow();
-            stage.setTitle("Finance Officer Dashboard");
-            stage.setScene(scene);
-            stage.show();
-
-
+        Stage stage = (Stage) showExRevAnchor.getScene().getWindow();
+        stage.setTitle("Finance Officer Dashboard");
+        stage.setScene(scene);
+        stage.show();
 
 
     }
 
     @javafx.fxml.FXML
     public void showONA(ActionEvent actionEvent) throws IOException, ClassNotFoundException {
-        Double totalExpense=0.0;
-        Double totalRevenue=0.0;
+        Double totalExpense = 0.0;
+        Double totalRevenue = 0.0;
         File f = new File("Expense.bin");
-        FileInputStream fis =new FileInputStream(f);
+        FileInputStream fis = new FileInputStream(f);
         ObjectInputStream ois = new ObjectInputStream(fis);
         File fR = new File("Revenue.bin");
-        FileInputStream fisR =new FileInputStream(fR);
-        ObjectInputStream oisR= new ObjectInputStream(fisR);
-        while (true){
-            Expense expense = (Expense) ois.readObject();
-            Revenue revenue = (Revenue) oisR.readObject();
-            if (MonthDate.getValue().getMonth()==expense.getExpense_date().getMonth()&&
-                    MonthDate.getValue().getYear()==expense.getExpense_date().getYear()){
-                totalExpense+=expense.getAmount();
-                Info("Rev"+ totalRevenue);
-            }
-            if (MonthDate.getValue().getMonth()==revenue.getRevmonth().getMonth()&&
-                    MonthDate.getValue().getYear()==revenue.getRevmonth().getYear()){
-                totalRevenue+=revenue.getRevAMount();
+        FileInputStream fisR = new FileInputStream(fR);
+        ObjectInputStream oisR = new ObjectInputStream(fisR);
+        while (true) {
+            try {
+                Expense expense = (Expense) ois.readObject();
+
+
+                if (MonthDate.getValue().getMonth() == expense.getExpense_date().getMonth() &&
+                        MonthDate.getValue().getYear() == expense.getExpense_date().getYear()) {
+                    totalExpense += expense.getAmount();
+//                 Info("Rev" + totalExpense);
+                }
+
+            } catch (EOFException eof) {
+                break;
             }
 
         }
+        while (true) {
+            try {
 
-//        Info("Expense"+ totalExpense);
+                Revenue revenue = (Revenue) oisR.readObject();
+                if (MonthDate.getValue().getMonth() == revenue.getRevmonth().getMonth() &&
+                        MonthDate.getValue().getYear() == revenue.getRevmonth().getYear()) {
+                    totalRevenue += revenue.getRevAMount();
+                }
+            } catch (EOFException eof) {
+                break;
+            }
+        }
+        monthlySummary ms =new monthlySummary(totalExpense,totalRevenue);
+        RevExTV.getItems().clear();
+        RevExTV.getItems().add(ms);
+
+
+    if (totalExpense==0.0 & totalRevenue==0.0) {
+        Info("No Expense or Revenue Found");
     }
 
-    @javafx.fxml.FXML
-    public void clearONA(ActionEvent actionEvent) {
+
     }
-    public void Info(String s) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText(s);
-        alert.showAndWait();
-    }
+        @javafx.fxml.FXML
+        public void clearONA (ActionEvent actionEvent){
+
+        }
+
+        public void Info (String s){
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText(s);
+            alert.showAndWait();
+        }
+
 }
