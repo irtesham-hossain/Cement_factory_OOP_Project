@@ -7,7 +7,31 @@ import java.io.Serializable;
 public class Dealer extends User implements Serializable {
     private int contact;
     private String address;
+    private String name;
 
+
+
+    public Dealer(int userId, String userType, String password,
+                  int contact, String address, String name) {
+        super(userId, userType, password);
+        this.contact = contact;
+        this.address = address;
+        this.name = name;
+    }
+
+    public Dealer(int contact, String address, String name) {
+        this.contact = contact;
+        this.address = address;
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public int getContact() {
         return contact;
@@ -25,28 +49,8 @@ public class Dealer extends User implements Serializable {
         this.address = address;
     }
 
-    @Override
-    public String toString() {
-        return "Dealer{" +
-                "contact=" + contact +
-                ", address='" + address + '\'' +
-                ", userId=" + userId +
-                ", password='" + password + '\'' +
-                ", name='" + name + '\'' +
-                ", userType='" + userType + '\'' +
-                '}';
-    }
 
-    public Dealer(int userId, String name, String userType, String password, int contact, String address) {
-        super(userId, name, userType, password);
-        this.contact = contact;
-        this.address = address;
-    }
 
-    public Dealer(String name, String address, int contact){
-        super(0, name, "Dealer", "default123"); // default userId and password
-        this.contact = contact;
-        this.address = address;
-    }
+
 
 }

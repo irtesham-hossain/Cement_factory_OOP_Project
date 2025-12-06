@@ -6,15 +6,18 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 
 public class viewDealerListController
 {
     @javafx.fxml.FXML
-    private TableColumn<Dealer,String> phoneTVColumn;
+    private TableColumn<Dealer,Integer> phoneTVColumn;
     @javafx.fxml.FXML
     private TableColumn<Dealer,String> dealerNameTVColumn;
     @javafx.fxml.FXML
@@ -27,7 +30,25 @@ public class viewDealerListController
     private AnchorPane viewDealerListAnchor;
 
     @javafx.fxml.FXML
-    public void initialize() {
+    public void initialize() throws IOException, ClassNotFoundException {
+        phoneTVColumn.setCellValueFactory(new PropertyValueFactory<>("contact"));
+        dealerNameTVColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        dealerIdTVColumn.setCellValueFactory(new PropertyValueFactory<>("userId"));
+        addressTVColumn.setCellValueFactory(new PropertyValueFactory<>("address"));
+
+        FileInputStream fis = new FileInputStream("addNewDealer.bin");
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        try {
+            while (true) {
+                Dealer dealer = (Dealer) ois.readObject();
+                tableView.getItems().add(dealer);
+            }
+        }catch(Exception e){
+
+
+        }
+
+
     }
 
     @javafx.fxml.FXML

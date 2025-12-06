@@ -15,15 +15,13 @@
                 <Font size="21.0" />
             </font>
         </Label>
-        <TableView fx:id="tableView" layoutX="54.0" layoutY="174.0" prefHeight="200.0" prefWidth="610.0">
+        <TableView fx:id="tableView" layoutX="120.0" layoutY="169.0" prefHeight="200.0" prefWidth="408.0">
             <columns>
                 <TableColumn fx:id="orderIDTVColumn" prefWidth="73.60003662109375" text="Order ID" />
                 <TableColumn fx:id="orderDateTVColumn" prefWidth="83.19995880126953" text="Order Date" />
-                <TableColumn fx:id="dealerNameTVColumn" prefWidth="103.2000732421875" text="Dealer Name" />
                 <TableColumn fx:id="productTypeTVColumn" prefWidth="97.60003662109375" text="Product Type" />
                 <TableColumn fx:id="quantityTVColumn" prefWidth="64.0" text="Quantity" />
                 <TableColumn fx:id="totalPriceTVColumn" prefWidth="80.79995727539062" text="Total Price" />
-                <TableColumn fx:id="deliveryStatusTVColumn" minWidth="0.0" prefWidth="101.60002441406255" text="Delivery Status" />
             </columns>
         </TableView>
         <Button layoutX="616.0" layoutY="434.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="26.0" prefWidth="62.0" text="Back" />

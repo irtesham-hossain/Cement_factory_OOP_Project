@@ -5,8 +5,8 @@ import cse213.cement_factory.main.User;
 public class SalesExecutive extends User {
     private String contact;
 
-    public SalesExecutive(int userId, String name, String userType, String password, String contact) {
-        super(userId, name, userType, password);
+    public SalesExecutive(int userId, String userType, String password, String contact) {
+        super(userId, userType, password);
         this.contact = contact;
     }
 
@@ -24,7 +24,6 @@ public class SalesExecutive extends User {
                 "contact='" + contact + '\'' +
                 ", userId=" + userId +
                 ", password='" + password + '\'' +
-                ", name='" + name + '\'' +
                 ", userType='" + userType + '\'' +
                 '}';
     }

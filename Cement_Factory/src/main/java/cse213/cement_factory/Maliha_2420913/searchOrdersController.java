@@ -11,7 +11,10 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.time.LocalDate;
 
 public class searchOrdersController
@@ -29,11 +32,7 @@ public class searchOrdersController
     @javafx.fxml.FXML
     private TableColumn<Order, LocalDate> orderDateTVColumn;
     @javafx.fxml.FXML
-    private TableColumn<Order,String> deliveryStatusTVColumn;
-    @javafx.fxml.FXML
     private AnchorPane searchOrderAnchor;
-    @javafx.fxml.FXML
-    private TableColumn<Order,String> dealerNameTVColumn;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -42,9 +41,7 @@ public class searchOrdersController
         orderDateTVColumn.setCellValueFactory(new PropertyValueFactory<>("orderDate"));
         quantityTVColumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         totalPriceTVColumn.setCellValueFactory(new PropertyValueFactory<>("totalPrice"));
-        dealerNameTVColumn.setCellValueFactory(new PropertyValueFactory<>("dealerName"));
         productTypeTVColumn.setCellValueFactory(new PropertyValueFactory<>("productType"));
-        deliveryStatusTVColumn.setCellValueFactory(new PropertyValueFactory<>("deliveryStatus"));
 
     }
 
@@ -61,6 +58,18 @@ public class searchOrdersController
     }
 
     @javafx.fxml.FXML
-    public void enterOrderIDButtonOnAction(ActionEvent actionEvent) {
+    public void enterOrderIDButtonOnAction(ActionEvent actionEvent) throws IOException {
+
+        FileInputStream fis = new FileInputStream("Order.bin");
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        try {
+            while (true) {
+                Order order = (Order) ois.readObject();
+                tableView.getItems().add(order);
+            }
+        }catch(Exception e){
+
+
+        }
     }
 }

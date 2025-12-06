@@ -40,7 +40,7 @@ public class confirmedOrdersController
 
 
     @javafx.fxml.FXML
-    public void initialize() {
+    public void initialize() throws IOException {
         orderIDTVColumn.setCellValueFactory(new PropertyValueFactory<>("orderId"));
         orderDateTVColumn.setCellValueFactory(new PropertyValueFactory<>("orderDate"));
         quantityTVColumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
@@ -50,26 +50,16 @@ public class confirmedOrdersController
         deliveryStatusTVColumn.setCellValueFactory(new PropertyValueFactory<>("deliveryStatus"));
 
 
-
-        ObservableList<Order> orders = FXCollections.observableArrayList();
-        File file = new File("Order.bin");
-
-        if(file.exists()) {
-            try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
-              while(true) {
-                try {
-                 Order order = (Order) ois.readObject();
-                 orders.add(order);
-        } catch (EOFException e) {
-               break;
-        }}
+        FileInputStream fis = new FileInputStream("Order.bin");
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        try {
+            while (true) {
+                Order order = (Order) ois.readObject();
+                tableView.getItems().add(order);
+            }
+        }catch(Exception e){
+            //
         }
-          catch (IOException | ClassNotFoundException e) {
-                //
-        }
-        }
-
-        tableView.setItems(orders);
     }
 
     @javafx.fxml.FXML

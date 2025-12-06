@@ -7,7 +7,7 @@ public class Order implements Serializable {
     private int orderId, quantity, totalPrice;
     private static int idCounter = 100;
     private String dealerName, productType, deliveryStatus;
-    private LocalDate orderDate;
+    private LocalDate orderDate, expectedDeliveryDate;
     private String location;
     private boolean isPaid;
 
@@ -71,6 +71,18 @@ public class Order implements Serializable {
         return location;
     }
 
+    public LocalDate getExpectedDeliveryDate() {
+        return expectedDeliveryDate;
+    }
+
+    public Order(LocalDate expectedDeliveryDate) {
+        this.expectedDeliveryDate = expectedDeliveryDate;
+    }
+
+    public void setExpectedDeliveryDate(LocalDate expectedDeliveryDate) {
+        this.expectedDeliveryDate = expectedDeliveryDate;
+    }
+
     public boolean isPaid() {
         return isPaid;
     }
@@ -118,9 +130,23 @@ public class Order implements Serializable {
         this.isPaid = isPaid;
     }
 
-    public Order( String productType, int quantity, String location){
-        this.productType = productType;
+    public Order(int orderId, int quantity, int totalPrice, String dealerName, String productType, String deliveryStatus, LocalDate orderDate, LocalDate expectedDeliveryDate, String location, boolean isPaid) {
+        this.orderId = orderId;
         this.quantity = quantity;
+        this.totalPrice = totalPrice;
+        this.dealerName = dealerName;
+        this.productType = productType;
+        this.deliveryStatus = deliveryStatus;
+        this.orderDate = orderDate;
+        this.expectedDeliveryDate = expectedDeliveryDate;
         this.location = location;
+        this.isPaid = isPaid;
     }
+
+    public Order(String productType, int quantity, String location){
+       this.productType = productType;
+       this.quantity = quantity;
+       this.location = location;
+    }
+
 }

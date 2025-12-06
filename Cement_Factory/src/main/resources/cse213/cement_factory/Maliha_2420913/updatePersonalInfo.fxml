@@ -18,13 +18,11 @@
       <Label layoutX="64.0" layoutY="214.0" text="Update Information:" />
       <Label layoutX="64.0" layoutY="247.0" text="Name:" />
       <Label layoutX="64.0" layoutY="296.0" text="Phone:" />
-      <Label layoutX="64.0" layoutY="333.0" text="Email:" />
-      <Label layoutX="64.0" layoutY="376.0" text="Address:" />
+      <Label layoutX="58.0" layoutY="342.0" text="Address:" />
       <TextField fx:id="nameTF" layoutX="118.0" layoutY="243.0" />
       <TextField fx:id="phoneTF" layoutX="119.0" layoutY="292.0" />
-      <TextField fx:id="emailTF" layoutX="119.0" layoutY="329.0" />
-      <TextField fx:id="addressTF" layoutX="119.0" layoutY="372.0" />
-      <Button layoutX="284.0" layoutY="372.0" mnemonicParsing="false" onAction="#updateInfoButtonOnAction" text="Update Information" />
+      <TextField fx:id="addressTF" layoutX="118.0" layoutY="338.0" />
+      <Button layoutX="284.0" layoutY="338.0" mnemonicParsing="false" onAction="#updateInfoButtonOnAction" text="Update Information" />
       <Button layoutX="507.0" layoutY="408.0" mnemonicParsing="false" onAction="#backButton" prefHeight="26.0" prefWidth="55.0" text="Back" />
    </children>
 </AnchorPane>

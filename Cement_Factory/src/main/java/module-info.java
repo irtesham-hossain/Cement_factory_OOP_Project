@@ -3,7 +3,7 @@ module cse213.cement_factory {
     requires javafx.fxml;
     requires javafx.graphics;
     requires java.desktop;
-
+    requires cse213.cement_factory;
 
 
 //    opens cse213.cement_factory to javafx.fxml;
@@ -15,5 +15,5 @@ module cse213.cement_factory {
     opens cse213.cement_factory.Irtesham_2420891.Finance_Officer to javafx.fxml;
     exports cse213.cement_factory.Irtesham_2420891.Finance_Officer;
     opens cse213.cement_factory.Maliha_2420913 to javafx.fxml;
-//    exports cse213.cement_factory.Maliha_2420913;
+    exports cse213.cement_factory.Maliha_2420913;
 }

@@ -30,7 +30,7 @@ public class salesExecutivedashboardController
         stage.show();
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void viewSalesReportOnActionButton(ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource
                 ("/cse213/cement_factory/Maliha_2420913/viewSalesReport.fxml"));
@@ -115,4 +115,16 @@ public class salesExecutivedashboardController
         stage.setScene(scene);
         stage.show();
     }
-}
+
+    @javafx.fxml.FXML
+    public void viewFeedbackOnActionButton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource
+                ("/cse213/cement_factory/Maliha_2420913/viewFeedback.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = (Stage) salesExecutiveDashboard.getScene().getWindow();
+        stage.setTitle("View Feedback");
+        stage.setScene(scene);
+        stage.show();
+    }
+    }

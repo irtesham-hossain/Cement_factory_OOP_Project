@@ -13,7 +13,7 @@
       <Button layoutX="378.0" layoutY="213.0" mnemonicParsing="false" onAction="#sendOrderConfirmationButtonOnAction" prefHeight="26.0" prefWidth="151.0" text="Send order confirmation" />
       <Button layoutX="376.0" layoutY="106.0" mnemonicParsing="false" onAction="#GenerateInvoiveButtonOnAction" prefHeight="26.0" prefWidth="151.0" text="Generate Invoice " />
       <Button layoutX="53.0" layoutY="256.0" mnemonicParsing="false" onAction="#searchOrdersOnActionButton" prefHeight="32.0" prefWidth="151.0" text="Search orders " />
-      <Button layoutX="53.0" layoutY="200.0" mnemonicParsing="false" onAction="#viewSalesReportOnActionButton" prefHeight="26.0" prefWidth="151.0" text="View Sales Report" />
+      <Button layoutX="53.0" layoutY="200.0" mnemonicParsing="false" onAction="#viewFeedbackOnActionButton" prefHeight="26.0" prefWidth="151.0" text="View Feedback" />
       <Button layoutX="53.0" layoutY="148.0" mnemonicParsing="false" onAction="#viewDeliveryStatusOnActionButton" text="View Delivery Status" />
       <Label layoutX="184.0" layoutY="30.0" prefHeight="42.0" prefWidth="250.0" text="Sales Executive Dashboard">
          <font>

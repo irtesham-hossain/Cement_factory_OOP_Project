@@ -56,7 +56,13 @@ public class addNewDealerController
         }
 
         Dealer dealer = new Dealer(
-        nameTF.getText(), addressTF.getText(),Integer.parseInt(contactTF.getText()));
+                111,
+                "Dealer",
+                "1234",
+                Integer.parseInt(contactTF.getText()),
+                addressTF.getText(),
+                nameTF.getText()
+        );
 
         File file = new File("addNewDealer.bin");
 

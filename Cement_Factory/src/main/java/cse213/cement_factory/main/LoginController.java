@@ -67,6 +67,33 @@ public class LoginController
                 stage.show();
             }
 
+        else if (Objects.equals(userTypeCombo.getValue(), "Sales Executive")){
+
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource
+                        ("/cse213/cement_factory/Maliha_2420913/salesExecutivedashboard.fxml"));
+                Scene scene = new Scene(fxmlLoader.load());
+
+                Stage stage = (Stage) loginAnchor.getScene().getWindow();
+                stage.setTitle("Sale Execuitive");
+                stage.setScene(scene);
+                stage.show();
+
+            }
+        else if ((Objects.equals(userTypeCombo.getValue(), "Dealer"))){
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource
+                    ("/cse213/cement_factory/Maliha_2420913/dealerDashboard.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+
+            Stage stage = (Stage) loginAnchor.getScene().getWindow();
+            stage.setTitle("Dealer");
+            stage.setScene(scene);
+            stage.show();
+
         }
+        }
+
+
+
+
 
 }
