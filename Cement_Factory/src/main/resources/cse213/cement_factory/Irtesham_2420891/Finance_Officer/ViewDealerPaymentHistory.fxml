@@ -8,25 +8,24 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Irtesham_2420891.Finance_Officer.ViewDealPaymentHistory_Controller">
+<AnchorPane fx:id="anchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Irtesham_2420891.Finance_Officer.ViewDealPaymentHistory_Controller">
     <children>
-        <TableView layoutX="58.0" layoutY="136.0" prefHeight="200.0" prefWidth="483.0">
+        <TableView fx:id="tableView" layoutX="58.0" layoutY="136.0" prefHeight="200.0" prefWidth="483.0">
             <columns>
-                <TableColumn prefWidth="218.66665649414062" text="Dealer Name" />
-                <TableColumn prefWidth="119.33331298828125" text="Paid Amount:" />
-            <TableColumn prefWidth="144.66668701171875" text="Paid Date:" />
+                <TableColumn fx:id="nameCol" prefWidth="218.66665649414062" text="Dealer Name" />
+                <TableColumn fx:id="paidAmountCol" prefWidth="119.33331298828125" text="Paid Amount:" />
+            <TableColumn fx:id="paidDateCol" prefWidth="144.66668701171875" text="Paid Date:" />
             </columns>
         </TableView>
-        <Button layoutX="307.0" layoutY="53.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" text="Show" />
+        <Button layoutX="307.0" layoutY="53.0" mnemonicParsing="false" onAction="#showONA" prefHeight="25.0" prefWidth="160.0" text="Show" />
         <Text layoutX="186.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Dealer Payment History" textAlignment="CENTER" wrappingWidth="289.7415771484375">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Button layoutX="15.0" layoutY="348.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" text="Clear Table" />
-        <Button layoutX="14.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Back" />
+        <Button layoutX="15.0" layoutY="348.0" mnemonicParsing="false" onAction="#claerONA" prefHeight="25.0" prefWidth="160.0" text="Clear Table" />
+        <Button layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#backONA" prefHeight="25.0" prefWidth="57.0" text="Back" />
         <Text layoutX="35.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dealer Name:" />
-        <TextField layoutX="135.0" layoutY="54.0" />
-        <Button layoutX="35.0" layoutY="99.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" text="Filter Latest 5 Payments" />
+        <TextField fx:id="DealerNameTF" layoutX="135.0" layoutY="54.0" />
     </children>
 </AnchorPane>

@@ -31,7 +31,9 @@ public class LoginController
     private Button loginButton;
 
     @javafx.fxml.FXML
-    public void initialize() {
+    public void initialize() throws IOException {
+        new CreateDummyDATA();
+
         userTypeCombo.getItems().addAll("Plant Manager","Finance Officer","Dealer","Sales Executive","Logistics Manager","Warehouse Supervisor","Marketing Manager","IT Officer");
     }
 
