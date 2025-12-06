@@ -11,19 +11,20 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class trackDeliveryStatusController
 {
     @javafx.fxml.FXML
-    private TableColumn orderIDTVColumn;
+    private TableColumn<Delivery,Integer> orderIDTVColumn;
     @javafx.fxml.FXML
-    private TableView tableView;
+    private TableView<Delivery> tableView;
     @javafx.fxml.FXML
-    private TableColumn expectedDeliveryDateTVColumn;
+    private TableColumn<Delivery, LocalDate> expectedDeliveryDateTVColumn;
     @javafx.fxml.FXML
-    private TableColumn orderDateTVColumn;
+    private TableColumn<Delivery, LocalDate> orderDateTVColumn;
     @javafx.fxml.FXML
-    private TableColumn deliveryStatusTVColumn;
+    private TableColumn<Delivery,String> deliveryStatusTVColumn;
     @javafx.fxml.FXML
     private AnchorPane trackDeliveryAnchor;
 
