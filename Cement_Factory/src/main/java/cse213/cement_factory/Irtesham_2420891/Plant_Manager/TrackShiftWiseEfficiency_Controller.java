@@ -43,7 +43,6 @@ public class TrackShiftWiseEfficiency_Controller
     public void checkEffciencyONA(ActionEvent actionEvent) throws IOException, ClassNotFoundException {
         FileInputStream fis = new FileInputStream("ProductionRecord.bin");
         ObjectInputStream ois = new ObjectInputStream(fis);
-//        ProductionRecord TS = (ProductionRecord) ois.readObject();
         ProductionRecord matchedTarget = null;
         ProductionRecord matchedProduction = null;
 
@@ -65,7 +64,7 @@ public class TrackShiftWiseEfficiency_Controller
                 }
             }
         } catch (EOFException e) {
-            // END OF FILE → this is expected
+
 
 
         ois.close();
@@ -96,9 +95,6 @@ public class TrackShiftWiseEfficiency_Controller
         EffficiencyPieChartData.add(new PieChart.Data("Remaining Target", remaining));
 
         EffficiencyPieChart.setData(EffficiencyPieChartData);
-//        outputLabel.setText("Efficiency is : "+((produced/target)*100));
-
-//        Info("Remaining: " + remaining);
     }
 
 

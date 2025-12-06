@@ -41,18 +41,23 @@ public class updatePersonalInfoController
             Info("Please enter all information");
 
         }
+        Dealer dealer = new Dealer(
+                111,
+                "Dealer",
+                "1234", (Integer.parseInt(phoneTF.getText())),addressTF.getText(),nameTF.getText()
+        );
         File pi = new File("PersonalInfo.bin");
         if (pi.exists()) {
             FileOutputStream fos = new FileOutputStream(pi, true);
             ObjectOutputStream obs = new AppendableObjectOutputStream(fos);
-            obs.writeObject(new Dealer(Integer.parseInt(phoneTF.getText()),addressTF.getText(),nameTF.getText()));
+            obs.writeObject(dealer);
             obs.close();
             Info("Information is Updated");
         }
         else {
             FileOutputStream fos = new FileOutputStream("PersonalInfo.bin");
             ObjectOutputStream obs = new ObjectOutputStream(fos);
-            obs.writeObject(new Dealer (Integer.parseInt(phoneTF.getText()),addressTF.getText(),nameTF.getText()));
+            obs.writeObject(dealer);
             Info("Information is Updated");
             obs.close();
         }

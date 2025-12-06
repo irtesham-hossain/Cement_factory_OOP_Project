@@ -13,18 +13,18 @@ public class Dealer extends User implements Serializable {
 
     public Dealer(int userId, String userType, String password,
                   int contact, String address, String name) {
-        super(userId, userType, password);
-        this.contact = contact;
-        this.address = address;
-        this.name = name;
-    }
-
-    public Dealer(int contact, String address, String name) {
         super(123, "Dealer", "123");
         this.contact = contact;
         this.address = address;
         this.name = name;
     }
+
+//    public Dealer(int contact, String address, String name) {
+//        super(123, "Dealer", "123");
+//        this.contact = contact;
+//        this.address = address;
+//        this.name = name;
+//    }
 
     public String getName() {
         return name;
@@ -49,7 +49,6 @@ public class Dealer extends User implements Serializable {
     public void setAddress(String address) {
         this.address = address;
     }
-
 
 
 

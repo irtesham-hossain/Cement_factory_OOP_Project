@@ -64,7 +64,7 @@ public class addNewDealerController
                 nameTF.getText()
         );
 
-        File file = new File("addNewDealer.bin");
+        File file = new File("AddNewDealer.bin");
 
         if(file.exists()) {
             FileOutputStream fos= new FileOutputStream(file,true);
@@ -74,7 +74,7 @@ public class addNewDealerController
             Info("Dealer added");
         }
         else {
-            FileOutputStream fos = new FileOutputStream("addNewDealer.bin");
+            FileOutputStream fos = new FileOutputStream("AddNewDealer.bin");
             ObjectOutputStream obs = new ObjectOutputStream(fos);
             obs.writeObject(dealer);
             obs.close();
