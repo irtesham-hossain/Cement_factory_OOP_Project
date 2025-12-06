@@ -60,8 +60,6 @@ public class searchPastOrders
         FileInputStream fis = new FileInputStream("Order.bin");
         ObjectInputStream ois = new ObjectInputStream(fis);
         try {
-
-
             while (true) {
                 Order order = (Order) ois.readObject();
                 TableView.getItems().add(order);

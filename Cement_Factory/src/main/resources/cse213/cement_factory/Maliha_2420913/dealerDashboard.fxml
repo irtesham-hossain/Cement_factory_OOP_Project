@@ -20,6 +20,6 @@
                 <Font size="20.0" />
             </font>
         </Label>
-      <Button layoutX="552.0" layoutY="366.0" mnemonicParsing="false" onAction="#backButton" prefHeight="26.0" prefWidth="59.0" text="Back" />
+      <Button layoutX="507.0" layoutY="366.0" mnemonicParsing="false" onAction="#signOut" prefHeight="26.0" prefWidth="104.0" text="Sign Out" />
     </children>
 </AnchorPane>

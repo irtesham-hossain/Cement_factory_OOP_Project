@@ -36,7 +36,7 @@ public class viewDealerListController
         dealerIdTVColumn.setCellValueFactory(new PropertyValueFactory<>("userId"));
         addressTVColumn.setCellValueFactory(new PropertyValueFactory<>("address"));
 
-        FileInputStream fis = new FileInputStream("AddNewDealer.bin");
+        FileInputStream fis = new FileInputStream("addNewDealer.bin");
         ObjectInputStream ois = new ObjectInputStream(fis);
         try {
             while (true) {
@@ -45,10 +45,7 @@ public class viewDealerListController
             }
         }catch(Exception e){
 
-
         }
-        ois.close();
-
 
     }
 

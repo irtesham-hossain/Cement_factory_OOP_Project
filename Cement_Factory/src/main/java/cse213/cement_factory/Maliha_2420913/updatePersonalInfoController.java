@@ -39,7 +39,7 @@ public class updatePersonalInfoController
     public void updateInfoButtonOnAction(ActionEvent actionEvent) throws IOException {
         if(nameTF.getText().isEmpty() || phoneTF.getText().isEmpty() || addressTF.getText().isEmpty()){
             Info("Please enter all information");
-
+            return;
         }
         Dealer dealer = new Dealer(
                 111,

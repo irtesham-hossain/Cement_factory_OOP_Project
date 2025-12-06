@@ -54,19 +54,6 @@ public class dealerDashboardController
         stage.setScene(scene);
         stage.show();
     }
-
-    @javafx.fxml.FXML
-    public void backButton(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource
-                ("/cse213/cement_factory/Maliha_2420913/dealerDashboard.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-
-        Stage stage = (Stage) DealerDashboardAnchor.getScene().getWindow();
-        stage.setTitle("");
-        stage.setScene(scene);
-        stage.show();
-    }
-
     @javafx.fxml.FXML
     public void viewPaymentHistoryButton(ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource
@@ -123,6 +110,18 @@ public class dealerDashboardController
 
         Stage stage = (Stage) DealerDashboardAnchor.getScene().getWindow();
         stage.setTitle("Provide feedback");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @javafx.fxml.FXML
+    public void signOut(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource
+                ("/cse213/cement_factory/Maliha_2420913/login.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = (Stage) DealerDashboardAnchor.getScene().getWindow();
+        stage.setTitle("");
         stage.setScene(scene);
         stage.show();
     }

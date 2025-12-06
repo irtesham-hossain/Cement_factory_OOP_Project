@@ -45,7 +45,6 @@ public class addNewDealerController
         stage.setTitle("Add New Dealer");
         stage.setScene(scene);
         stage.show();
-
     }
 
     @javafx.fxml.FXML

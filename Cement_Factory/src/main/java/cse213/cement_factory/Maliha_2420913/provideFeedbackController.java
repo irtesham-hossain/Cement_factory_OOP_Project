@@ -52,6 +52,10 @@ public class provideFeedbackController
             Info("select a type");
             return;
         }
+        if (goodButton.isSelected() && avgbutton.isSelected() || goodButton.isSelected() && poorButton.isSelected()
+        || avgbutton.isSelected() && poorButton.isSelected()){
+            Info("Select one rating");
+        }
         feedBack feedback = new feedBack("Dealer", productTypeCB.getValue(),yourFeedbackTA.getText());
         File file = new File("Feedback.bin");
 

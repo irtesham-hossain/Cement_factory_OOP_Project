@@ -35,9 +35,6 @@ public class sendOrderConfirmationController
             return;
 
         }
-
-
-
     }
 
     @javafx.fxml.FXML

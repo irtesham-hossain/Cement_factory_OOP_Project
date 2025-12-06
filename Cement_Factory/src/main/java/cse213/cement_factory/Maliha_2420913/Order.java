@@ -118,7 +118,7 @@ public class Order implements Serializable {
                 '}';
     }
 
-    public Order(int orderId, int quantity, int totalPrice, String dealerName, String productType, String deliveryStatus, LocalDate orderDate, String location, boolean isPaid) {
+    /*public Order(int orderId, int quantity, int totalPrice, String dealerName, String productType, String deliveryStatus, LocalDate orderDate, String location, boolean isPaid) {
         this.orderId = idCounter++;
         this.quantity = quantity;
         this.totalPrice = totalPrice;
@@ -128,9 +128,9 @@ public class Order implements Serializable {
         this.orderDate = orderDate;
         this.location = location;
         this.isPaid = isPaid;
-    }
+    }*/
 
-    public Order(int orderId, int quantity, int totalPrice, String dealerName, String productType, String deliveryStatus, LocalDate orderDate, LocalDate expectedDeliveryDate, String location, boolean isPaid) {
+    /*public Order(int orderId, int quantity, int totalPrice, String dealerName, String productType, String deliveryStatus, LocalDate orderDate, LocalDate expectedDeliveryDate, String location, boolean isPaid) {
         this.orderId = orderId;
         this.quantity = quantity;
         this.totalPrice = totalPrice;
@@ -141,7 +141,7 @@ public class Order implements Serializable {
         this.expectedDeliveryDate = expectedDeliveryDate;
         this.location = location;
         this.isPaid = isPaid;
-    }
+    }*/
 
     public Order(String productType, int quantity, String location){
        this.productType = productType;

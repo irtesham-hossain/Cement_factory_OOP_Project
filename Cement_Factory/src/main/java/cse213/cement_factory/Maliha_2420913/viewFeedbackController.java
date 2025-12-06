@@ -4,9 +4,8 @@ import cse213.cement_factory.main.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -19,13 +18,23 @@ public class viewFeedbackController
     @javafx.fxml.FXML
     private ComboBox<String> productTypeCB;
     @javafx.fxml.FXML
-    private Label outputLabel;
-    @javafx.fxml.FXML
     private AnchorPane viewFeedbackAnchor;
+    @javafx.fxml.FXML
+    private TableColumn<feedBack,String> nameTV;
+    @javafx.fxml.FXML
+    private TableColumn<feedBack,String> typeTV;
+    @javafx.fxml.FXML
+    private TableView<feedBack> tableView;
+    @javafx.fxml.FXML
+    private TableColumn<feedBack,String> feedbackTV;
 
     @javafx.fxml.FXML
     public void initialize() {
         productTypeCB.getItems().addAll("OPC","PPC","SRC","White Cement");
+        nameTV.setCellValueFactory(new PropertyValueFactory<>("name"));
+        typeTV.setCellValueFactory(new PropertyValueFactory<>("type"));
+        feedbackTV.setCellValueFactory(new PropertyValueFactory<>("feedbackText"));
+
     }
 
     @javafx.fxml.FXML
@@ -35,7 +44,7 @@ public class viewFeedbackController
         Scene scene = new Scene(fxmlLoader.load());
 
         Stage stage = (Stage) viewFeedbackAnchor.getScene().getWindow();
-        stage.setTitle("Add New Dealer");
+        stage.setTitle("add feedback");
         stage.setScene(scene);
         stage.show();
     }
@@ -51,11 +60,10 @@ public class viewFeedbackController
         try {
             while (true) {
                 feedBack feedback = (feedBack) ois.readObject();
-                outputLabel.setText(feedback.toString());
+                tableView.getItems().add(feedback);
+
             }
         }catch(Exception e){
-
-
         }
 
     }

@@ -20,5 +20,6 @@
             <Font size="21.0" />
          </font>
       </Label>
+      <Button layoutX="505.0" layoutY="355.0" mnemonicParsing="false" onAction="#signOutButton" prefHeight="26.0" prefWidth="92.0" text="Sign out" />
    </children>
 </AnchorPane>

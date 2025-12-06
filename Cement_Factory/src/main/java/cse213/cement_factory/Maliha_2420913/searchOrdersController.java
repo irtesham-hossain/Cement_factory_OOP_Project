@@ -4,6 +4,7 @@ import cse213.cement_factory.main.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -22,26 +23,22 @@ public class searchOrdersController
     @javafx.fxml.FXML
     private TableColumn<Order,String> productTypeTVColumn;
     @javafx.fxml.FXML
-    private TableColumn<Order,Integer> orderIDTVColumn;
-    @javafx.fxml.FXML
-    private TableColumn<Order,Integer> totalPriceTVColumn;
-    @javafx.fxml.FXML
     private TableColumn<Order,Integer> quantityTVColumn;
     @javafx.fxml.FXML
     private TableView<Order> tableView;
     @javafx.fxml.FXML
-    private TableColumn<Order, LocalDate> orderDateTVColumn;
-    @javafx.fxml.FXML
     private AnchorPane searchOrderAnchor;
+    @javafx.fxml.FXML
+    private TableColumn locationTV;
+    @javafx.fxml.FXML
+    private DatePicker dateDP;
 
     @javafx.fxml.FXML
     public void initialize() {
 
-        orderIDTVColumn.setCellValueFactory(new PropertyValueFactory<>("orderId"));
-        orderDateTVColumn.setCellValueFactory(new PropertyValueFactory<>("orderDate"));
         quantityTVColumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
-        totalPriceTVColumn.setCellValueFactory(new PropertyValueFactory<>("totalPrice"));
         productTypeTVColumn.setCellValueFactory(new PropertyValueFactory<>("productType"));
+        locationTV.setCellValueFactory(new PropertyValueFactory<>("location"));
 
     }
 
