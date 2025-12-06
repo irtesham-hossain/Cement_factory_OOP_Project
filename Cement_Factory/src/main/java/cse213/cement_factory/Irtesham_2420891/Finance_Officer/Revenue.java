@@ -4,20 +4,20 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 public class Revenue implements Serializable {
-    private  LocalDate month;
+    private  LocalDate revmonth;
     private double revAMount;
 
     public Revenue(LocalDate month, double revAMount) {
-        this.month = month;
+        this.revmonth = month;
         this.revAMount = revAMount;
     }
 
-    public LocalDate getMonth() {
-        return month;
+    public LocalDate getRevmonth() {
+        return revmonth;
     }
 
-    public void setMonth(LocalDate month) {
-        this.month = month;
+    public void setRevmonth(LocalDate revmonth) {
+        this.revmonth = revmonth;
     }
 
     public double getRevAMount() {
