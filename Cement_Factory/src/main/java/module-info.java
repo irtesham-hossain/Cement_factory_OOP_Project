@@ -3,7 +3,7 @@ module cse213.cement_factory {
     requires javafx.fxml;
     requires javafx.graphics;
     requires java.desktop;
-    requires cse213.cement_factory;
+
 
 
 //    opens cse213.cement_factory to javafx.fxml;

@@ -20,6 +20,7 @@ public class Dealer extends User implements Serializable {
     }
 
     public Dealer(int contact, String address, String name) {
+        super(123, "Dealer", "123");
         this.contact = contact;
         this.address = address;
         this.name = name;
