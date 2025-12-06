@@ -123,4 +123,16 @@ public class FinanceDashboard_Controller
         stage.show();
 
     }
+
+    @javafx.fxml.FXML
+    public void signOutONA(ActionEvent actionEvent) throws IOException { FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/cse213/cement_factory/main/Login.fxml")
+    );
+
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = (Stage) financeAnchor.getScene().getWindow();
+        stage.setTitle("Login");
+        stage.setScene(scene);
+        stage.show();
+    }
 }

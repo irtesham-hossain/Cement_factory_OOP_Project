@@ -1,6 +1,7 @@
 package cse213.cement_factory.main;
 
 import cse213.cement_factory.Irtesham_2420891.Finance_Officer.DealerPaymentDummy;
+import cse213.cement_factory.Irtesham_2420891.Finance_Officer.Finance_Officer;
 import cse213.cement_factory.Irtesham_2420891.Plant_Manager.Plant_Manager;
 
 import java.io.FileOutputStream;
@@ -16,11 +17,18 @@ public class CreateDummyDATA {
         ObjectOutputStream obs = new ObjectOutputStream(fos);
 
         Plant_Manager PLM1 = new Plant_Manager(101, "Plant Manger", "101");
-        Plant_Manager PLM2 = new Plant_Manager(102, "Plant Manger", "102");
         obs.writeObject(PLM1);
-        obs.writeObject(PLM2);
+
         obs.close();
         fos.close();
+        FileOutputStream f = new FileOutputStream("FinanceOfficer.bin");
+        ObjectOutputStream o = new ObjectOutputStream(f);
+
+        Finance_Officer FO1 = new Finance_Officer(101, "Finance Officer", "101");
+        o.writeObject(FO1);
+
+        o.close();
+        f.close();
 
         FileOutputStream  DPfos= new FileOutputStream("DealerPayment.bin");
         ObjectOutputStream DPobs = new ObjectOutputStream(DPfos);

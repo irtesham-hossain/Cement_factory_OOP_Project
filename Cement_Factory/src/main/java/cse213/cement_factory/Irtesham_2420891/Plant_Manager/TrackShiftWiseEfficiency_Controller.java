@@ -41,6 +41,10 @@ public class TrackShiftWiseEfficiency_Controller
 
     @javafx.fxml.FXML
     public void checkEffciencyONA(ActionEvent actionEvent) throws IOException, ClassNotFoundException {
+        if (EfficientDate.getValue()==null||shiftNumberCombo.getValue()==null){
+            Info("All Fields Must be filled");
+            return;
+        }
         FileInputStream fis = new FileInputStream("ProductionRecord.bin");
         ObjectInputStream ois = new ObjectInputStream(fis);
         ProductionRecord matchedTarget = null;

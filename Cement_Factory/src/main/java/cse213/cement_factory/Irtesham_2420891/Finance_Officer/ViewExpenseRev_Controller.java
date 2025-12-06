@@ -65,7 +65,7 @@ public class ViewExpenseRev_Controller {
                 if (MonthDate.getValue().getMonth() == expense.getExpense_date().getMonth() &&
                         MonthDate.getValue().getYear() == expense.getExpense_date().getYear()) {
                     totalExpense += expense.getAmount();
-//                 Info("Rev" + totalExpense);
+
                 }
 
             } catch (EOFException eof) {

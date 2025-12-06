@@ -13,8 +13,8 @@ public class Finance_Officer extends User {
         this.department = department;
     }
 
-    public Finance_Officer(int userId, String userType, String password, String department) {
+    public Finance_Officer(int userId, String userType, String password ) {
         super(userId, userType, password);
-        this.department = department;
+
     }
 }

@@ -5,6 +5,7 @@ import cse213.cement_factory.main.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -58,6 +59,10 @@ public class ViewDealPaymentHistory_Controller {
 
     @javafx.fxml.FXML
     public void showONA(ActionEvent actionEvent) throws IOException, ClassNotFoundException {
+        if (DealerNameTF.getText().isEmpty()){
+            Info("Dealer Name can be empty");
+            return;
+        }
         FileInputStream fis = new FileInputStream("DealerPayment.bin");
         ObjectInputStream ois = new ObjectInputStream(fis);
 
@@ -72,5 +77,10 @@ public class ViewDealPaymentHistory_Controller {
                 break;
             }
         }
+    }
+    public void Info(String s) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText(s);
+        alert.showAndWait();
     }
 }

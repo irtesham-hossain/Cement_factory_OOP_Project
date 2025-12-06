@@ -7,7 +7,7 @@ public class ProductionRecord  implements Serializable {
     private LocalDate production_date;
     private int shift;
     private int amount_produced;
-//    private int efficiency_stats;
+
     private int target_production;
     private int cementBag;
 
@@ -43,13 +43,7 @@ public class ProductionRecord  implements Serializable {
         this.amount_produced = amount_produced;
     }
 
-//    public int getEfficiency_stats() {
-//        return efficiency_stats;
-//    }
 
-//    public void setEfficiency_stats(int efficiency_stats) {
-//        this.efficiency_stats = efficiency_stats;
-//    }
 
     public int getTarget_production() {
         return target_production;

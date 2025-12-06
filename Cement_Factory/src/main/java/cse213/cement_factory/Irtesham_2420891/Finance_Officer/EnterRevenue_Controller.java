@@ -31,6 +31,11 @@ public class EnterRevenue_Controller
 
     @javafx.fxml.FXML
     public void addONA(ActionEvent actionEvent) throws IOException {
+        if (monthDP.getValue()==null||RevenueTF.getText().isEmpty()){
+            Info("All Fields Must be filled");
+            return;
+
+        }
         File f= new File("Revenue.bin");
         if (f.exists()){
             FileOutputStream fis= new FileOutputStream(f,true);
