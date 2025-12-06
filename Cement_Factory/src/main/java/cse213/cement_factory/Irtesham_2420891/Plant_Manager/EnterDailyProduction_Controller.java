@@ -90,7 +90,7 @@ public class EnterDailyProduction_Controller {
             FileOutputStream fos = new FileOutputStream("ProductionRecord.bin");
             ObjectOutputStream obs = new ObjectOutputStream(fos);
             obs.writeObject(new ProductionRecord (productionDate.getValue(), shift_number, Integer.parseInt(ProducedAmountTF.getText())));
-            Info("Attendance is Recorded");
+            Info("Production is Recorded");
             obs.close();
         }
     }

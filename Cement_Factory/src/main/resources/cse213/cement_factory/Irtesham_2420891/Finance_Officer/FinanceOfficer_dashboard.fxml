@@ -5,23 +5,23 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Irtesham_2420891.Finance_Officer.FinanceDashboard_Controller">
+<AnchorPane fx:id="financeAnchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Irtesham_2420891.Finance_Officer.FinanceDashboard_Controller">
     <children>
         <Text layoutX="158.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Finance Officer Dashboard" wrappingWidth="283.620361328125">
             <font>
                 <Font size="24.0" />
             </font>
         </Text>
-        <Button layoutX="34.0" layoutY="75.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="284.0" text="Generate daily, weekly, or monthly financial reports">
+        <Button layoutX="34.0" layoutY="75.0" mnemonicParsing="false" onAction="#financiaReportONA" prefHeight="32.0" prefWidth="284.0" text="Generate daily, weekly, or monthly financial reports">
          <font>
             <Font size="11.0" />
          </font></Button>
-        <Button layoutX="34.0" layoutY="142.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="237.0" text="Record and update company expenses" />
-        <Button layoutX="34.0" layoutY="214.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="237.0" text="View dealer payment history" />
-        <Button layoutX="34.0" layoutY="285.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="237.0" text="Enter Staff Salary " />
-        <Button layoutX="330.0" layoutY="75.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="237.0" text="Generate Audit Report" />
-        <Button layoutX="330.0" layoutY="142.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="237.0" text="View monthly expense summary" />
-        <Button layoutX="330.0" layoutY="214.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="237.0" text="Track pending or failed dealer payments" />
-        <Button layoutX="330.0" layoutY="285.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="237.0" text="Generate salary and wage reports" />
+        <Button layoutX="34.0" layoutY="142.0" mnemonicParsing="false" onAction="#recordExpenseONA" prefHeight="32.0" prefWidth="237.0" text="Record and update company expenses" />
+        <Button layoutX="34.0" layoutY="214.0" mnemonicParsing="false" onAction="#ViewDealerPaymentONA" prefHeight="32.0" prefWidth="237.0" text="View dealer payment history" />
+        <Button layoutX="34.0" layoutY="285.0" mnemonicParsing="false" onAction="#EnterStaffSalaryONA" prefHeight="32.0" prefWidth="237.0" text="Enter Staff Salary " />
+        <Button layoutX="330.0" layoutY="75.0" mnemonicParsing="false" onAction="#ExRevReportONA" prefHeight="32.0" prefWidth="237.0" text="Show Expense and Revenue Report" />
+        <Button layoutX="330.0" layoutY="142.0" mnemonicParsing="false" onAction="#ViewExpenseONA" prefHeight="32.0" prefWidth="237.0" text="View monthly expense summary" />
+        <Button layoutX="330.0" layoutY="214.0" mnemonicParsing="false" onAction="#trackFailedDealerPaymentONA" prefHeight="32.0" prefWidth="237.0" text="Track pending or failed dealer payments" />
+        <Button layoutX="330.0" layoutY="285.0" mnemonicParsing="false" onAction="#generateSalaryReport" prefHeight="32.0" prefWidth="237.0" text="Generate salary and wage reports" />
     </children>
 </AnchorPane>
