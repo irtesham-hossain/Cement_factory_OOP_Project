@@ -10,10 +10,10 @@
 
 <AnchorPane fx:id="showExRevAnchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.cement_factory.Irtesham_2420891.Finance_Officer.ViewExpenseRev_Controller">
     <children>
-        <TableView layoutX="58.0" layoutY="136.0" prefHeight="200.0" prefWidth="483.0">
+        <TableView fx:id="RevExTV" layoutX="58.0" layoutY="136.0" prefHeight="200.0" prefWidth="483.0">
             <columns>
-                <TableColumn prefWidth="251.33334350585938" text="Expense" />
-            <TableColumn prefWidth="230.00002034505206" text="Revenue" />
+                <TableColumn fx:id="expenseCol" prefWidth="251.33334350585938" text="Expense" />
+            <TableColumn fx:id="RevenueCol" prefWidth="230.00002034505206" text="Revenue" />
             </columns>
         </TableView>
         <Button fx:id="showButton" layoutX="426.0" layoutY="54.0" mnemonicParsing="false" onAction="#showONA" prefHeight="25.0" prefWidth="160.0" text="Show" />
